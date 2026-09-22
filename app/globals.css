@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
+@theme {
+  --color-carbon-black: #000000;
+  --color-paper-white: #ffffff;
+  --color-warm-canvas: #e5e5e5;
+  --color-mist-gray: #f3f3f3;
+  --color-ash: #c6c6c6;
+  --color-smoke: #979797;
+  --color-slate: #444444;
+  --color-graphite: #2f2f2f;
+  --color-mint-chip: #d1ffca;
+  --color-voltage-yellow: #fff100;
+
+  --font-condensed: var(--font-condensed), "Barlow Condensed", "Bebas Neue", sans-serif;
+  --font-sans: var(--font-sans), "Inter", sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
+
+  --radius-tag: 64px;
+  --radius-card: 32px;
+  --radius-button: 8px;
+  --radius-pill: 48px;
+  --radius-large: 64px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-carbon-black: #000000;
+  --color-paper-white: #ffffff;
+  --color-warm-canvas: #e5e5e5;
+  --color-mist-gray: #f3f3f3;
+  --color-ash: #c6c6c6;
+  --color-smoke: #979797;
+  --color-slate: #444444;
+  --color-graphite: #2f2f2f;
+  --color-mint-chip: #d1ffca;
+  --color-voltage-yellow: #fff100;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e5e5e5;
+  color: #000000;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brutalist editorial display headlines */
+.font-condensed {
+  font-family: var(--font-condensed);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+}
+
+.tight-leading {
+  line-height: 0.9;
+}
+
+/* Flat design constraint: No box-shadows across cards, pill, buttons */
+.flat-card {
+  box-shadow: none !important;
+}
+
+/* Selection */
+::selection {
+  background-color: #d1ffca;
+  color: #000000;
 }
