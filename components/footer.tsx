@@ -1,22 +1,28 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { Factory, Mail, Phone, MapPin, ArrowUp, ShieldCheck } from "lucide-react";
+import { Building2, Mail, Phone, MapPin, ArrowUp, ShieldCheck, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const isEn = language === "en";
+
   return (
     <footer className="bg-[#000000] text-[#ffffff] border-t border-[#2f2f2f] pt-16 pb-12">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#2f2f2f]">
           {/* Company Brand Column */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-[#171717] rounded-[8px] flex items-center justify-center border border-[#2f2f2f]">
-                <Factory className="w-5 h-5 text-[#d1ffca]" />
+                <Building2 className="w-5 h-5 text-[#d1ffca]" />
               </div>
               <div>
                 <span className="font-condensed text-2xl font-bold tracking-tight uppercase block leading-none">
-                  PT KARYA FABRIKA MANDIRI
+                  PT. KARYA FABRIKA MANDIRI
                 </span>
                 <span className="font-mono text-[11px] text-[#979797] uppercase">
                   Engineering · Construction · Manufacturing
@@ -25,10 +31,9 @@ export function Footer() {
             </div>
 
             <p className="text-[14px] text-[#979797] leading-relaxed max-w-[420px] font-normal">
-              Perusahaan penyedia solusi terintegrasi di bidang konsultasi rekayasa,
-              konstruksi struktur baja, pengadaan material proyek, dan manufaktur presisi.
-              Berkomitmen pada ketepatan perencanaan, mutu tinggi, efisiensi biaya,
-              serta standar keselamatan K3 nasional.
+              {isEn
+                ? "Integrated contractor providing engineering consultation, structural steel construction, material procurement, and precision fabrication with a continuous Zero Accident K3 commitment."
+                : "Perusahaan penyedia solusi terintegrasi di bidang konsultasi rekayasa, konstruksi struktur baja, pengadaan material proyek, dan manufaktur presisi dengan komitmen Zero Accident K3 nasional."}
             </p>
 
             <div className="flex flex-wrap gap-2 pt-2">
@@ -44,55 +49,47 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Pillars Navigation */}
+          {/* Site Navigation */}
           <div className="lg:col-span-3 space-y-3">
             <span className="font-mono text-xs text-[#d1ffca] uppercase tracking-wider block">
-              [ 04 PILAR UTAMA ]
+              [ {isEn ? "QUICK NAVIGATION" : "NAVIGASI HALAMAN"} ]
             </span>
             <ul className="space-y-2 text-sm text-[#979797]">
               <li>
-                <a
-                  href="#layanan"
-                  className="hover:text-white transition-colors flex items-center gap-1.5"
-                >
-                  <span>01.</span>
-                  <span>Konsultasi &amp; Desain Teknis</span>
-                </a>
+                <Link href="/" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>•</span>
+                  <span>{isEn ? "Home Page" : "Halaman Utama (Home)"}</span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#layanan"
-                  className="hover:text-white transition-colors flex items-center gap-1.5"
-                >
-                  <span>02.</span>
-                  <span>Konstruksi Baja Terpadu</span>
-                </a>
+                <Link href="/#visi-misi" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>•</span>
+                  <span>{isEn ? "Vision, Mission & Motto" : "Visi, Misi & Motto"}</span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#layanan"
-                  className="hover:text-white transition-colors flex items-center gap-1.5"
-                >
-                  <span>03.</span>
-                  <span>Pengadaan Material Proyek</span>
-                </a>
+                <Link href="/our-services" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>•</span>
+                  <span>{isEn ? "Our Services" : "Layanan Kami (Our Services)"}</span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#layanan"
-                  className="hover:text-white transition-colors flex items-center gap-1.5"
-                >
-                  <span>04.</span>
-                  <span>Manufaktur &amp; Fabrikasi Workshop</span>
-                </a>
+                <Link href="/portofolio" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>•</span>
+                  <span>{isEn ? "Project Portfolio" : "Portofolio Proyek"}</span>
+                </Link>
               </li>
-              <li className="pt-2">
-                <a
-                  href="#kalkulator"
-                  className="text-[#ffffff] hover:text-[#d1ffca] font-mono text-xs flex items-center gap-1"
-                >
-                  → Buka Kalkulator Estimasi Proyek
-                </a>
+              <li>
+                <Link href="/legalitas" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>•</span>
+                  <span>{isEn ? "Legality & Compliance" : "Legalitas & Sertifikasi"}</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact-us" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>•</span>
+                  <span>{isEn ? "Contact Us" : "Hubungi Kami (Contact Us)"}</span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -100,7 +97,7 @@ export function Footer() {
           {/* Contact & Workshop Address */}
           <div className="lg:col-span-4 space-y-3">
             <span className="font-mono text-xs text-[#d1ffca] uppercase tracking-wider block">
-              [ KANTOR &amp; WORKSHOP ]
+              [ {isEn ? "OFFICE & WORKSHOP" : "KANTOR & WORKSHOP"} ]
             </span>
             <div className="space-y-3 text-xs font-mono text-[#979797]">
               <div>
@@ -108,8 +105,7 @@ export function Footer() {
                   Workshop &amp; Fabrikasi:
                 </span>
                 <p>
-                  Kawasan Industri Jababeka Phase VI, Cikarang, Kab. Bekasi, Jawa Barat
-                  17530
+                  Kawasan Industri Jababeka Phase VI, Cikarang, Kab. Bekasi, Jawa Barat 17530
                 </p>
               </div>
 
@@ -139,20 +135,20 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#979797]">
           <p>
-            © {new Date().getFullYear()} PT KARYA FABRIKA MANDIRI. All rights reserved.
+            © {new Date().getFullYear()} PT. KARYA FABRIKA MANDIRI. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#k3-sertifikasi" className="hover:text-white transition-colors">
-              Kebijakan K3 &amp; Mutu
-            </a>
-            <a href="#layanan" className="hover:text-white transition-colors">
-              Standar Operasional Prosedur
-            </a>
+            <Link href="/legalitas" className="hover:text-white transition-colors">
+              {isEn ? "Legality & Licenses" : "Legalitas & Izin Usaha"}
+            </Link>
+            <Link href="/contact-us" className="hover:text-white transition-colors">
+              {isEn ? "Consultation Desk" : "Meja Konsultasi"}
+            </Link>
             <a
               href="#"
               className="flex items-center gap-1 text-[#d1ffca] hover:underline"
             >
-              <span>Kembali Ke Atas</span>
+              <span>{isEn ? "Back To Top" : "Kembali Ke Atas"}</span>
               <ArrowUp className="w-3.5 h-3.5" />
             </a>
           </div>

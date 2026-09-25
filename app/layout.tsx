@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/components/providers";
 
 const barlowCondensed = Barlow_Condensed({
   weight: ["600", "700", "800"],
@@ -22,19 +23,21 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PT Karya Fabrika Mandiri — Solusi Terintegrasi Rekayasa, Konstruksi, Pengadaan & Manufaktur",
+  title: "PT. KARYA FABRIKA MANDIRI — Building Trust Through Quality",
   description:
-    "Penyedia solusi terintegrasi di bidang konsultasi, konstruksi, pengadaan material, dan manufaktur presisi untuk mendukung proyek dari perencanaan hingga pelaksanaan dengan standar K3 dan mutu terbaik.",
+    "Solusi Terintegrasi Rekayasa, Konstruksi, Pengadaan & Manufaktur Presisi. Berkomitmen pada standar mutu SNI/ASTM, akurasi perencanaan BIM 3D, dan Zero Accident K3.",
   keywords: [
+    "PT. KARYA FABRIKA MANDIRI",
     "PT Karya Fabrika Mandiri",
-    "Konsultasi Teknik",
     "Konstruksi Baja",
-    "Pengadaan Material Proyek",
-    "Manufaktur & Fabrikasi Presisi",
-    "Gudang Modern",
-    "Struktur Baja",
+    "Fabrikasi Baja Presisi",
+    "Gudang Industri",
+    "Jasa Konstruksi",
+    "Pengadaan Material Baja",
+    "Kontraktor EPC",
+    "Building Trust Through Quality",
   ],
-  authors: [{ name: "PT Karya Fabrika Mandiri" }],
+  authors: [{ name: "PT. KARYA FABRIKA MANDIRI" }],
 };
 
 export default function RootLayout({
@@ -48,7 +51,7 @@ export default function RootLayout({
       className={`${barlowCondensed.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen bg-[#e5e5e5] text-[#000000] font-sans antialiased selection:bg-[#d1ffca] selection:text-black">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

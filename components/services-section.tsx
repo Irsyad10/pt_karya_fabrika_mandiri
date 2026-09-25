@@ -89,7 +89,9 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="layanan" className="py-16 sm:py-24">
+    <section id="layanan" className="py-16 sm:py-24 scroll-mt-20">
+      <span id="our-service" className="sr-only" />
+      <span id="services" className="sr-only" />
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Section Top Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">

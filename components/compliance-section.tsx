@@ -58,7 +58,8 @@ export function ComplianceSection() {
   ];
 
   return (
-    <section id="k3-sertifikasi" className="py-16 sm:py-24">
+    <section id="legalitas" className="py-16 sm:py-24 scroll-mt-20">
+      <span id="k3-sertifikasi" className="sr-only" />
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">

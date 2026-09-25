@@ -42,8 +42,10 @@ export function CtaInquiry() {
   return (
     <section
       id="inquiry"
-      className="py-16 sm:py-24 bg-[#000000] text-[#ffffff] rounded-[36px] sm:rounded-[48px] max-w-[1240px] mx-auto px-6 sm:px-12 my-8"
+      className="py-16 sm:py-24 bg-[#000000] text-[#ffffff] rounded-[36px] sm:rounded-[48px] max-w-[1240px] mx-auto px-6 sm:px-12 my-8 scroll-mt-20"
     >
+      <span id="contact-us" className="sr-only" />
+      <span id="contact" className="sr-only" />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left: Brutalist Editorial Headline & Contact Channels */}
         <div className="lg:col-span-6 flex flex-col justify-between">

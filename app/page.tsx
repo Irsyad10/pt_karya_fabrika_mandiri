@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { VisionMissionSection } from "@/components/vision-mission-section";
 import { StatsSection } from "@/components/stats-section";
 import { ServicesSection } from "@/components/services-section";
 import { ValuesSection } from "@/components/values-section";
@@ -19,6 +20,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <Hero />
+
+      {/* Visi, Misi & Motto Section */}
+      <VisionMissionSection />
 
       {/* Performance & Trust Metrics */}
       <StatsSection />

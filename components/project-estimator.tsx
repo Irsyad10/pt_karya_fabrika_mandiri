@@ -150,7 +150,7 @@ export function ProjectEstimator() {
                     02. ESTIMASI LUAS BANGUNAN / AREA (M²)
                   </label>
                   <span className="font-mono text-base font-bold text-[#000000] bg-[#d1ffca] px-3 py-1 rounded-[6px]">
-                    {area.toLocaleString()} m²
+                    {area.toLocaleString('id-ID')} m²
                   </span>
                 </div>
 
@@ -166,7 +166,7 @@ export function ProjectEstimator() {
                           : "bg-[#f3f3f3] text-[#444444] border-transparent hover:border-[#c6c6c6]"
                       }`}
                     >
-                      {preset.toLocaleString()} m²
+                      {preset.toLocaleString('id-ID')} m²
                     </button>
                   ))}
                 </div>
@@ -320,7 +320,7 @@ export function ProjectEstimator() {
                   </span>
                   <div className="flex items-baseline gap-2">
                     <span className="font-condensed text-[54px] sm:text-[64px] font-black leading-none text-[#ffffff]">
-                      ~{estimatedTonnage.toLocaleString()}
+                      ~{estimatedTonnage.toLocaleString('id-ID')}
                     </span>
                     <span className="font-mono text-lg text-[#d1ffca] font-bold">TON</span>
                   </div>
