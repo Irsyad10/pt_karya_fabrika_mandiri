@@ -98,13 +98,13 @@ export function ServicesSection() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Badge variant="mint">SOLUSI MENYELURUH DARI HULU KE HILIR</Badge>
-              <span className="font-mono text-[12px] text-[#444444]">01 / 04</span>
+              <span className="font-mono text-[12px] text-[#71767c]">01 / 04</span>
             </div>
-            <h2 className="font-condensed text-[44px] sm:text-[68px] font-extrabold uppercase tracking-tight text-[#000000] leading-[0.9]">
+            <h2 className="font-condensed text-[44px] sm:text-[68px] font-extrabold uppercase tracking-tight text-[#012655] leading-[0.9]">
               EMPAT PILAR KAPABILITAS TERPADU
             </h2>
           </div>
-          <p className="text-[16px] text-[#444444] max-w-[480px] font-normal leading-relaxed">
+          <p className="text-[16px] text-[#484d53] max-w-[480px] font-normal leading-relaxed">
             Tidak perlu berkoordinasi dengan banyak vendor terpisah. PT Karya Fabrika Mandiri
             menghubungkan setiap mata rantai proyek dalam satu tata kelola rekayasa yang rapi,
             efisien, dan bertanggung jawab penuh.
@@ -122,21 +122,21 @@ export function ServicesSection() {
                 onClick={() => setActiveTab(i)}
                 className={`p-5 rounded-[20px] text-left transition-all cursor-pointer border ${
                   isActive
-                    ? "bg-[#000000] text-[#ffffff] border-[#000000]"
-                    : "bg-[#ffffff] text-[#000000] border-[#c6c6c6]/50 hover:border-[#000000]"
+                    ? "bg-[#012655] text-[#ffffff] border-[#012655] shadow-sm"
+                    : "bg-[#ffffff] text-[#012655] border-[#a4a6a9]/30 hover:border-[#0065bf]"
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <span
                     className={`font-mono text-[12px] ${
-                      isActive ? "text-[#d1ffca]" : "text-[#979797]"
+                      isActive ? "text-[#60a5fa]" : "text-[#71767c]"
                     }`}
                   >
                     PILAR {svc.id}
                   </span>
                   <Icon
                     className={`w-5 h-5 ${
-                      isActive ? "text-[#d1ffca]" : "text-[#444444]"
+                      isActive ? "text-[#60a5fa]" : "text-[#484d53]"
                     }`}
                   />
                 </div>
@@ -148,12 +148,12 @@ export function ServicesSection() {
           })}
         </div>
 
-        {/* Active Pillar Featured Display Card (DESIGN.md Standard Card: #ffffff, 32px radius, no shadow) */}
-        <div className="bg-[#ffffff] rounded-[32px] p-6 sm:p-10 border border-[#c6c6c6]/60 flat-card">
+        {/* Active Pillar Featured Display Card */}
+        <div className="bg-[#ffffff] rounded-[32px] p-6 sm:p-10 border border-[#a4a6a9]/30 flat-card shadow-xs">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left: Image Container with Visual Tags */}
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="relative aspect-[16/10] rounded-[24px] overflow-hidden bg-[#e5e5e5] border border-[#c6c6c6]/40">
+              <div className="relative aspect-[16/10] rounded-[24px] overflow-hidden bg-[#edf2f7] border border-[#a4a6a9]/30">
                 <Image
                   src={services[activeTab].image}
                   alt={services[activeTab].name}
@@ -166,8 +166,8 @@ export function ServicesSection() {
                     {services[activeTab].tag}
                   </Badge>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4 bg-[#000000]/85 text-white p-3 rounded-[12px] text-xs font-mono backdrop-blur-sm flex items-center justify-between">
-                  <span className="text-[#d1ffca]">OUTPUT:</span>
+                <div className="absolute bottom-4 left-4 right-4 bg-[#012655]/90 text-white p-3 rounded-[12px] text-xs font-mono backdrop-blur-sm flex items-center justify-between border border-white/10">
+                  <span className="text-[#60a5fa] font-bold">OUTPUT:</span>
                   <span className="truncate max-w-[260px] sm:max-w-none text-right">
                     {services[activeTab].deliverable}
                   </span>
@@ -178,7 +178,7 @@ export function ServicesSection() {
             {/* Right: Detailed Capabilities & Action */}
             <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-3">
-                <span className="font-mono text-sm font-semibold text-[#000000]">
+                <span className="font-mono text-sm font-semibold text-[#0065bf]">
                   {services[activeTab].id} / 04
                 </span>
                 <Badge variant="yellow" size="sm">
@@ -186,11 +186,11 @@ export function ServicesSection() {
                 </Badge>
               </div>
 
-              <h3 className="font-condensed text-[34px] sm:text-[46px] font-extrabold uppercase text-[#000000] leading-none mb-4">
+              <h3 className="font-condensed text-[34px] sm:text-[46px] font-extrabold uppercase text-[#012655] leading-none mb-4">
                 {services[activeTab].name}
               </h3>
 
-              <p className="text-[16px] text-[#444444] leading-relaxed mb-6 font-normal">
+              <p className="text-[16px] text-[#484d53] leading-relaxed mb-6 font-normal">
                 {services[activeTab].summary}
               </p>
 
@@ -198,10 +198,10 @@ export function ServicesSection() {
               <div className="space-y-2.5 mb-8">
                 {services[activeTab].capabilities.map((cap, cIdx) => (
                   <div key={cIdx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#d1ffca] text-[#000000] flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-5 h-5 rounded-full bg-[#0065bf] text-[#ffffff] flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <span className="text-[14px] sm:text-[15px] text-[#2f2f2f] font-medium leading-snug">
+                    <span className="text-[14px] sm:text-[15px] text-[#484d53] font-medium leading-snug">
                       {cap}
                     </span>
                   </div>
@@ -209,11 +209,11 @@ export function ServicesSection() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex items-center gap-3 pt-4 border-t border-[#e5e5e5]">
+              <div className="flex items-center gap-3 pt-4 border-t border-[#a4a6a9]/20">
                 <a href="#inquiry">
-                  <Button variant="primary" size="md" className="gap-2">
+                  <Button variant="mint" size="md" className="gap-2 shadow-xs">
                     <span>Konsultasikan Layanan Ini</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#d1ffca]" />
+                    <ArrowUpRight className="w-4 h-4 text-white" />
                   </Button>
                 </a>
                 <a href="#portofolio">

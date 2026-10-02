@@ -92,17 +92,17 @@ export default function ContactUsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e5e5e5] text-[#000000] selection:bg-[#d1ffca] selection:text-black">
+    <div className="min-h-screen bg-[#f4f6f9] text-[#012655] selection:bg-[#0065bf] selection:text-white">
       <Navbar />
 
       {/* Header Banner */}
-      <section className="bg-[#000000] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#2f2f2f]">
+      <section className="bg-gradient-to-b from-[#012655] to-[#001a3d] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#0065bf]/20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2 mb-4">
             <Badge variant="mint" size="sm">
               {isEn ? "CONSULTATION & INQUIRIES" : "LAYANAN KONSULTASI & TENDER"}
             </Badge>
-            <span className="font-mono text-xs text-[#979797]">
+            <span className="font-mono text-xs text-[#a4a6a9]">
               {isEn ? "TALK TO OUR ENGINEERS" : "RESPON CEPAT & PROFESIONAL"}
             </span>
           </div>
@@ -113,7 +113,7 @@ export default function ContactUsPage() {
               : "HUBUNGI TIM REKAYASA & KONSULTASI KAMI"}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#c6c6c6] max-w-3xl leading-relaxed font-normal mb-8">
+          <p className="text-base sm:text-lg text-[#a4a6a9] max-w-3xl leading-relaxed font-normal mb-8">
             {isEn
               ? "Whether you require a preliminary feasibility study, accurate structural cost estimation (BoQ), material procurement, or workshop visit, our engineering and commercial teams are ready to support your facility goals."
               : "Apakah Anda memerlukan estimasi anggaran proyek (RAB), konsultasi teknis pemodelan 3D BIM, penawaran fabrikasi presisi, atau kunjungan ke workshop kami, tim rekayasa PT. Karya Fabrika Mandiri siap membantu Anda secara responsif."}
@@ -126,8 +126,8 @@ export default function ContactUsPage() {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <Button variant="mint" size="lg" className="rounded-[8px] px-8 text-black font-bold gap-2 text-sm">
-                <MessageSquare className="w-4 h-4 text-black" />
+              <Button variant="mint" size="lg" className="rounded-[8px] px-8 text-white font-bold gap-2 text-sm shadow-md">
+                <MessageSquare className="w-4 h-4 text-white" />
                 <span>{isEn ? "Direct WhatsApp Chat" : "Chat Langsung via WhatsApp"}</span>
               </Button>
             </a>
@@ -145,15 +145,15 @@ export default function ContactUsPage() {
       <section className="py-16 sm:py-24 max-w-[1280px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column: Interactive Consultation & Tender Form (7 Cols) */}
-          <div className="lg:col-span-7 bg-[#ffffff] rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 border border-[#c6c6c6]/60 shadow-sm">
+          <div className="lg:col-span-7 bg-[#ffffff] rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 border border-[#a4a6a9]/30 shadow-sm">
             <div className="mb-6">
               <Badge variant="ash" size="sm" className="mb-2">
                 {isEn ? "ONLINE FORM" : "FORMULIR KONSULTASI"}
               </Badge>
-              <h2 className="font-condensed text-[32px] sm:text-[42px] font-black uppercase tracking-tight text-[#000000] leading-none">
+              <h2 className="font-condensed text-[32px] sm:text-[42px] font-black uppercase tracking-tight text-[#012655] leading-none">
                 {isEn ? "SUBMIT YOUR PROJECT SPECS" : "KIRIMKAN SPESIFIKASI PROYEK ANDA"}
               </h2>
-              <p className="text-xs sm:text-sm text-[#555555] mt-1.5 leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#484d53] mt-1.5 leading-relaxed">
                 {isEn
                   ? "Fill in your facility details below. Our technical estimator will review your requirements and follow up within 24 hours."
                   : "Lengkapi data proyek Anda di bawah ini. Tim estimator dan engineer kami akan mempelajari kebutuhan teknis dan merespons dalam waktu 24 jam."}
@@ -161,14 +161,14 @@ export default function ContactUsPage() {
             </div>
 
             {submitted ? (
-              <div className="p-8 rounded-[20px] bg-[#d1ffca]/30 border border-[#34c759] text-center animate-in zoom-in-95 duration-200">
-                <div className="w-14 h-14 rounded-full bg-[#34c759] text-white flex items-center justify-center mx-auto mb-4">
+              <div className="p-8 rounded-[20px] bg-[#0065bf]/10 border border-[#0065bf] text-center animate-in zoom-in-95 duration-200">
+                <div className="w-14 h-14 rounded-full bg-[#0065bf] text-white flex items-center justify-center mx-auto mb-4 shadow-md">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-condensed text-2xl sm:text-3xl font-bold uppercase text-[#000000] mb-2">
+                <h3 className="font-condensed text-2xl sm:text-3xl font-bold uppercase text-[#012655] mb-2">
                   {isEn ? "Inquiry Transmitted Successfully!" : "Permohonan Berhasil Terkirim!"}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#333333] max-w-md mx-auto mb-6">
+                <p className="text-xs sm:text-sm text-[#484d53] max-w-md mx-auto mb-6">
                   {isEn
                     ? "Thank you for contacting PT. Karya Fabrika Mandiri. You are being redirected to our WhatsApp technical desk. You may also contact us directly."
                     : "Terima kasih telah menghubungi PT. Karya Fabrika Mandiri. Data Anda telah disiapkan untuk diteruskan ke technical desk WhatsApp kami."}
@@ -186,7 +186,7 @@ export default function ContactUsPage() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                    <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                       {isEn ? "Full Name *" : "Nama Lengkap *"}
                     </label>
                     <input
@@ -195,12 +195,12 @@ export default function ContactUsPage() {
                       placeholder={isEn ? "e.g. John Doe" : "Contoh: Ir. Budi Santoso"}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-sm text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-sm text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                    <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                       {isEn ? "Company / Institution" : "Nama Perusahaan / Instansi"}
                     </label>
                     <input
@@ -208,14 +208,14 @@ export default function ContactUsPage() {
                       placeholder={isEn ? "e.g. PT Maju Bersama" : "Contoh: PT Logistik Sukses"}
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-sm text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-sm text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                    <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                       {isEn ? "Email Address *" : "Alamat Email *"}
                     </label>
                     <input
@@ -224,12 +224,12 @@ export default function ContactUsPage() {
                       placeholder="email@perusahaan.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-sm text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-sm text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                    <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                       {isEn ? "WhatsApp / Phone *" : "Nomor WhatsApp / HP *"}
                     </label>
                     <input
@@ -238,20 +238,20 @@ export default function ContactUsPage() {
                       placeholder="+62 812 3456 7890"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-sm text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-sm text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                    <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                       {isEn ? "Service Category *" : "Kategori Layanan *"}
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-3 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-xs text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                      className="w-full px-3 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-xs text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                     >
                       <option value="Gudang Baja / Industrial Warehouse">
                         {isEn ? "Industrial Warehouse" : "Konstruksi Gudang Baja"}
@@ -275,7 +275,7 @@ export default function ContactUsPage() {
                   </div>
 
                   <div>
-                    <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                    <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                       {isEn ? "Project Location" : "Lokasi Proyek"}
                     </label>
                     <input
@@ -283,12 +283,12 @@ export default function ContactUsPage() {
                       placeholder={isEn ? "e.g. Cikarang, Bekasi" : "Contoh: Cikarang / Karawang"}
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                      className="w-full px-3 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-xs text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                      className="w-full px-3 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-xs text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                    <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                       {isEn ? "Estimated Area / Tonnage" : "Estimasi Luas / Tonase"}
                     </label>
                     <input
@@ -296,13 +296,13 @@ export default function ContactUsPage() {
                       placeholder={isEn ? "e.g. 5,000 m² / 300 Ton" : "Contoh: 5,000 m² / 250 Ton"}
                       value={formData.area}
                       onChange={(e) => setFormData({ ...formData, area: e.target.value })}
-                      className="w-full px-3 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-xs text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                      className="w-full px-3 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-xs text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="font-mono text-xs text-[#000000] font-bold block mb-1.5">
+                  <label className="font-mono text-xs text-[#012655] font-bold block mb-1.5">
                     {isEn ? "Message & Project Description *" : "Pesan & Deskripsi Kebutuhan Teknis *"}
                   </label>
                   <textarea
@@ -315,7 +315,7 @@ export default function ContactUsPage() {
                     }
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#c6c6c6] text-sm text-[#000000] focus:outline-none focus:border-[#000000] transition-colors"
+                    className="w-full px-4 py-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/40 text-sm text-[#012655] focus:outline-none focus:border-[#0065bf] transition-colors"
                   />
                 </div>
 
@@ -325,7 +325,7 @@ export default function ContactUsPage() {
                   size="lg"
                   className="w-full rounded-[8px] py-3.5 gap-2 text-sm font-bold shadow-sm"
                 >
-                  <Send className="w-4 h-4 text-[#d1ffca]" />
+                  <Send className="w-4 h-4 text-[#60a5fa]" />
                   <span>{isEn ? "Submit Inquiry to Technical Desk" : "Kirim Permohonan Konsultasi"}</span>
                 </Button>
               </form>
@@ -335,82 +335,82 @@ export default function ContactUsPage() {
           {/* Right Column: Office & Workshop Addresses (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">
             {/* Workshop Card */}
-            <div className="bg-[#ffffff] rounded-[24px] p-6 sm:p-8 border border-[#c6c6c6]/60 shadow-sm">
+            <div className="bg-[#ffffff] rounded-[24px] p-6 sm:p-8 border border-[#a4a6a9]/30 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-[8px] bg-[#000000] text-white flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-[#d1ffca]" />
+                <div className="w-10 h-10 rounded-[8px] bg-[#012655] text-white flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-[#60a5fa]" />
                 </div>
                 <div>
-                  <span className="font-mono text-[10px] text-[#888888] uppercase block">
+                  <span className="font-mono text-[10px] text-[#484d53] uppercase block">
                     FACILITY / WORKSHOP YARD:
                   </span>
-                  <h3 className="font-condensed text-xl font-bold uppercase text-[#000000]">
+                  <h3 className="font-condensed text-xl font-bold uppercase text-[#012655]">
                     Workshop &amp; Fabrikasi Presisi
                   </h3>
                 </div>
               </div>
 
-              <p className="text-xs sm:text-sm text-[#555555] leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-[#484d53] leading-relaxed mb-4">
                 Kawasan Industri Jababeka Phase VI, Blok C No. 12-14, Cikarang, Kabupaten Bekasi, Jawa Barat 17530
               </p>
 
-              <div className="space-y-2 text-xs font-mono text-[#444444] pt-3 border-t border-[#f0f0f0]">
+              <div className="space-y-2 text-xs font-mono text-[#484d53] pt-3 border-t border-[#f0f3f7]">
                 <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-[#333333]" />
+                  <Phone className="w-3.5 h-3.5 text-[#0065bf]" />
                   <span>+62 21 8990 1234 (Workshop Desk)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-[#333333]" />
+                  <Mail className="w-3.5 h-3.5 text-[#0065bf]" />
                   <span>workshop@karyafabrika.co.id</span>
                 </div>
               </div>
             </div>
 
             {/* Head Office Card */}
-            <div className="bg-[#ffffff] rounded-[24px] p-6 sm:p-8 border border-[#c6c6c6]/60 shadow-sm">
+            <div className="bg-[#ffffff] rounded-[24px] p-6 sm:p-8 border border-[#a4a6a9]/30 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-[8px] bg-[#000000] text-white flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-[#fff100]" />
+                <div className="w-10 h-10 rounded-[8px] bg-[#012655] text-white flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-[#60a5fa]" />
                 </div>
                 <div>
-                  <span className="font-mono text-[10px] text-[#888888] uppercase block">
+                  <span className="font-mono text-[10px] text-[#484d53] uppercase block">
                     HEAD OFFICE:
                   </span>
-                  <h3 className="font-condensed text-xl font-bold uppercase text-[#000000]">
+                  <h3 className="font-condensed text-xl font-bold uppercase text-[#012655]">
                     Kantor Pusat &amp; Desain Rekayasa
                   </h3>
                 </div>
               </div>
 
-              <p className="text-xs sm:text-sm text-[#555555] leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-[#484d53] leading-relaxed mb-4">
                 Gedung Menara Mandiri Lt. 18, Jl. Jend. Sudirman Kav. 54-55, Senayan, Jakarta Selatan 12190
               </p>
 
-              <div className="space-y-2 text-xs font-mono text-[#444444] pt-3 border-t border-[#f0f0f0]">
+              <div className="space-y-2 text-xs font-mono text-[#484d53] pt-3 border-t border-[#f0f3f7]">
                 <div className="flex items-center gap-2">
-                  <Clock className="w-3.5 h-3.5 text-[#333333]" />
+                  <Clock className="w-3.5 h-3.5 text-[#0065bf]" />
                   <span>Senin - Jumat: 08.00 - 17.00 WIB</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-[#333333]" />
+                  <Mail className="w-3.5 h-3.5 text-[#0065bf]" />
                   <span>proyek@karyafabrika.co.id</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
+                  <MessageSquare className="w-3.5 h-3.5 text-[#0065bf]" />
                   <span>Hotline WhatsApp: +62 812 3456 7890 (24/7)</span>
                 </div>
               </div>
             </div>
 
             {/* Safety & Service Promise */}
-            <div className="bg-[#000000] text-white rounded-[24px] p-6 border border-[#2f2f2f]">
+            <div className="bg-gradient-to-br from-[#012655] to-[#001a3d] text-white rounded-[24px] p-6 border border-[#0065bf]/30 shadow-md">
               <div className="flex items-center gap-2 mb-2">
-                <ShieldCheck className="w-5 h-5 text-[#d1ffca]" />
+                <ShieldCheck className="w-5 h-5 text-[#60a5fa]" />
                 <span className="font-condensed text-lg font-bold uppercase text-white">
                   {isEn ? "Prequalification Ready" : "Siap Prakualifikasi Vendor"}
                 </span>
               </div>
-              <p className="text-xs text-[#979797] leading-relaxed">
+              <p className="text-xs text-[#a4a6a9] leading-relaxed">
                 {isEn
                   ? "We provide full audited legality dossiers, ISO certificates, and company profile booklets for vendor registration."
                   : "Dokumen legalitas perusahaan, SBU LPJK, ISO 9001/45001, dan sertifikat juru las siap dikirimkan untuk proses prakualifikasi rekanan."}
@@ -421,16 +421,16 @@ export default function ContactUsPage() {
       </section>
 
       {/* Frequently Asked Questions Section */}
-      <section className="py-16 sm:py-24 bg-[#ffffff] border-t border-[#c6c6c6]">
+      <section className="py-16 sm:py-24 bg-[#ffffff] border-t border-[#a4a6a9]/30">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
           <div className="mb-10 text-center max-w-2xl mx-auto">
             <Badge variant="mint" size="sm" className="mb-2">
               FAQ
             </Badge>
-            <h2 className="font-condensed text-[36px] sm:text-[48px] font-black uppercase tracking-tight text-[#000000] leading-none mb-3">
+            <h2 className="font-condensed text-[36px] sm:text-[48px] font-black uppercase tracking-tight text-[#012655] leading-none mb-3">
               {isEn ? "FREQUENTLY ASKED QUESTIONS" : "PERTANYAAN UMUM SEPUTAR LAYANAN"}
             </h2>
-            <p className="text-xs sm:text-sm text-[#555555]">
+            <p className="text-xs sm:text-sm text-[#484d53]">
               {isEn
                 ? "Key information regarding technical delivery, warranties, steel certificates, and budgeting."
                 : "Informasi penting mengenai proses tender, estimasi anggaran RAB, sertifikasi material, dan standar keselamatan."}
@@ -443,23 +443,23 @@ export default function ContactUsPage() {
               return (
                 <div
                   key={idx}
-                  className="rounded-[16px] border border-[#e5e5e5] bg-[#fcfcfc] overflow-hidden transition-all"
+                  className="rounded-[16px] border border-[#a4a6a9]/30 bg-[#f8f9fc] overflow-hidden transition-all"
                 >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#000000]"
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#012655]"
                   >
                     <span>{isEn ? faq.qEn : faq.qId}</span>
                     <ChevronDown
-                      className={`w-4 h-4 text-[#666666] shrink-0 transition-transform duration-200 ${
+                      className={`w-4 h-4 text-[#0065bf] shrink-0 transition-transform duration-200 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-[#555555] leading-relaxed border-t border-[#f0f0f0]">
+                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-[#484d53] leading-relaxed border-t border-[#a4a6a9]/20">
                       {isEn ? faq.aEn : faq.aId}
                     </div>
                   )}

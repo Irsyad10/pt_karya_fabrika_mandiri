@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-carbon-black: #000000;
+  --color-kfm-navy: #012655;
+  --color-kfm-blue: #0065bf;
+  --color-kfm-charcoal: #484d53;
+  --color-kfm-silver: #a4a6a9;
+  --color-kfm-white: #ffffff;
+
+  --color-carbon-black: #012655;
   --color-paper-white: #ffffff;
-  --color-warm-canvas: #e5e5e5;
-  --color-mist-gray: #f3f3f3;
-  --color-ash: #c6c6c6;
-  --color-smoke: #979797;
-  --color-slate: #444444;
-  --color-graphite: #2f2f2f;
-  --color-mint-chip: #d1ffca;
-  --color-voltage-yellow: #fff100;
+  --color-warm-canvas: #f4f6f9;
+  --color-mist-gray: #edf2f7;
+  --color-ash: #a4a6a9;
+  --color-smoke: #71767c;
+  --color-slate: #484d53;
+  --color-graphite: #001a3d;
+  --color-mint-chip: #0065bf;
+  --color-voltage-yellow: #0065bf;
 
   --font-condensed: var(--font-condensed), "Barlow Condensed", "Bebas Neue", sans-serif;
   --font-sans: var(--font-sans), "Inter", sans-serif;
@@ -24,16 +30,22 @@
 }
 
 :root {
-  --color-carbon-black: #000000;
+  --color-kfm-navy: #012655;
+  --color-kfm-blue: #0065bf;
+  --color-kfm-charcoal: #484d53;
+  --color-kfm-silver: #a4a6a9;
+  --color-kfm-white: #ffffff;
+
+  --color-carbon-black: #012655;
   --color-paper-white: #ffffff;
-  --color-warm-canvas: #e5e5e5;
-  --color-mist-gray: #f3f3f3;
-  --color-ash: #c6c6c6;
-  --color-smoke: #979797;
-  --color-slate: #444444;
-  --color-graphite: #2f2f2f;
-  --color-mint-chip: #d1ffca;
-  --color-voltage-yellow: #fff100;
+  --color-warm-canvas: #f4f6f9;
+  --color-mist-gray: #edf2f7;
+  --color-ash: #a4a6a9;
+  --color-smoke: #71767c;
+  --color-slate: #484d53;
+  --color-graphite: #001a3d;
+  --color-mint-chip: #0065bf;
+  --color-voltage-yellow: #0065bf;
 }
 
 * {
@@ -45,8 +57,8 @@ html {
 }
 
 body {
-  background-color: #e5e5e5;
-  color: #000000;
+  background-color: #f4f6f9;
+  color: #012655;
   font-family: var(--font-sans);
   margin: 0;
   padding: 0;
@@ -74,6 +86,6 @@ body {
 
 /* Selection */
 ::selection {
-  background-color: #d1ffca;
-  color: #000000;
+  background-color: #0065bf;
+  color: #ffffff;
 }

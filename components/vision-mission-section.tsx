@@ -54,28 +54,28 @@ export function VisionMissionSection() {
       title: t("val.integrity"),
       desc: t("val.integrityDesc"),
       icon: ShieldCheck,
-      color: "text-[#d1ffca]",
+      color: "text-[#0065bf]",
     },
     {
       code: "PRE",
       title: t("val.precision"),
       desc: t("val.precisionDesc"),
       icon: Target,
-      color: "text-[#fff100]",
+      color: "text-[#0065bf]",
     },
     {
       code: "EFF",
       title: t("val.efficiency"),
       desc: t("val.efficiencyDesc"),
       icon: TrendingUp,
-      color: "text-[#d1ffca]",
+      color: "text-[#0065bf]",
     },
     {
       code: "SAF",
       title: t("val.safety"),
       desc: t("val.safetyDesc"),
       icon: Award,
-      color: "text-[#fff100]",
+      color: "text-[#0065bf]",
     },
   ];
 
@@ -88,53 +88,53 @@ export function VisionMissionSection() {
             <Badge variant="mint" size="sm">
               {t("vm.badge")}
             </Badge>
-            <span className="font-mono text-xs text-[#666666] uppercase">
+            <span className="font-mono text-xs text-[#71767c] uppercase">
               PT. KARYA FABRIKA MANDIRI
             </span>
           </div>
-          <h2 className="font-condensed text-[40px] sm:text-[60px] md:text-[68px] font-black uppercase tracking-tight text-[#000000] leading-[0.92]">
+          <h2 className="font-condensed text-[40px] sm:text-[60px] md:text-[68px] font-black uppercase tracking-tight text-[#012655] leading-[0.92]">
             {t("vm.title")}
           </h2>
         </div>
-        <p className="text-[15px] sm:text-[17px] text-[#444444] max-w-[460px] font-normal leading-relaxed">
+        <p className="text-[15px] sm:text-[17px] text-[#484d53] max-w-[460px] font-normal leading-relaxed">
           {t("vm.subtitle")}
         </p>
       </div>
 
-      {/* Motto Banner: Prominent & Authoritative */}
-      <div className="relative overflow-hidden bg-[#000000] text-white rounded-[28px] sm:rounded-[36px] p-8 sm:p-12 mb-12 border border-[#333333] shadow-lg">
+      {/* Motto Banner: Prominent & Authoritative in Corporate Navy */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#012655] via-[#012655] to-[#001736] text-white rounded-[28px] sm:rounded-[36px] p-8 sm:p-12 mb-12 border border-[#0065bf]/40 shadow-xl">
         {/* Decorative background grid and glow */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#d1ffca]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#0065bf]/25 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-2 h-2 rounded-full bg-[#34c759] animate-ping" />
-              <span className="font-mono text-xs text-[#d1ffca] uppercase tracking-widest font-semibold">
+              <span className="w-2 h-2 rounded-full bg-[#0065bf] animate-ping" />
+              <span className="font-mono text-xs text-[#60a5fa] uppercase tracking-widest font-semibold">
                 [ {t("vm.mottoLabel")} ]
               </span>
             </div>
             <h3 className="font-condensed text-[32px] sm:text-[46px] md:text-[54px] font-extrabold uppercase text-[#ffffff] leading-[0.95] tracking-tight mb-4">
               &ldquo;{t("vm.mottoText")}&rdquo;
             </h3>
-            <p className="text-[#c6c6c6] text-sm sm:text-base leading-relaxed font-normal">
+            <p className="text-[#a4a6a9] text-sm sm:text-base leading-relaxed font-normal">
               {t("vm.mottoDesc")}
             </p>
           </div>
 
           <div className="shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3">
-            <div className="px-5 py-3 rounded-[12px] bg-[#1a1a1a] border border-[#333333]">
-              <span className="font-mono text-[10px] text-[#888888] uppercase block">
+            <div className="px-5 py-3 rounded-[12px] bg-[#001a3d] border border-[#0065bf]/30">
+              <span className="font-mono text-[10px] text-[#a4a6a9] uppercase block">
                 {isEn ? "Pledge" : "Komitmen"}
               </span>
               <span className="font-condensed text-xl font-bold text-[#ffffff]">
                 100% Zero Accident K3
               </span>
             </div>
-            <div className="px-5 py-3 rounded-[12px] bg-[#1a1a1a] border border-[#333333]">
-              <span className="font-mono text-[10px] text-[#888888] uppercase block">
+            <div className="px-5 py-3 rounded-[12px] bg-[#001a3d] border border-[#0065bf]/30">
+              <span className="font-mono text-[10px] text-[#a4a6a9] uppercase block">
                 {isEn ? "Quality Standard" : "Standar Kualitas"}
               </span>
-              <span className="font-condensed text-xl font-bold text-[#d1ffca]">
+              <span className="font-condensed text-xl font-bold text-[#60a5fa]">
                 SNI · ASTM · ISO 9001
               </span>
             </div>
@@ -145,55 +145,55 @@ export function VisionMissionSection() {
       {/* Visi & Misi Split Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
         {/* Visi Card (5 Cols) */}
-        <div className="lg:col-span-5 bg-[#ffffff] rounded-[28px] p-7 sm:p-9 border border-[#c6c6c6]/60 flex flex-col justify-between shadow-sm">
+        <div className="lg:col-span-5 bg-[#ffffff] rounded-[28px] p-7 sm:p-9 border border-[#a4a6a9]/30 flex flex-col justify-between shadow-xs">
           <div>
             <div className="flex items-center justify-between mb-6">
-              <div className="w-12 h-12 rounded-[12px] bg-[#000000] text-white flex items-center justify-center">
-                <Compass className="w-6 h-6 text-[#d1ffca]" />
+              <div className="w-12 h-12 rounded-[12px] bg-[#012655] text-white flex items-center justify-center">
+                <Compass className="w-6 h-6 text-[#0065bf]" />
               </div>
               <Badge variant="mint" size="sm">
                 {t("vm.visionLabel")}
               </Badge>
             </div>
 
-            <h3 className="font-condensed text-[28px] sm:text-[36px] font-bold uppercase tracking-tight text-[#000000] leading-none mb-4">
+            <h3 className="font-condensed text-[28px] sm:text-[36px] font-bold uppercase tracking-tight text-[#012655] leading-none mb-4">
               {t("vm.visionTitle")}
             </h3>
 
-            <p className="text-[15px] sm:text-[16px] text-[#444444] leading-relaxed mb-6 font-normal">
+            <p className="text-[15px] sm:text-[16px] text-[#484d53] leading-relaxed mb-6 font-normal">
               {t("vm.visionDesc")}
             </p>
           </div>
 
-          <div className="pt-6 border-t border-[#e5e5e5] space-y-2.5">
-            <div className="flex items-center gap-2 text-xs font-mono text-[#444444]">
-              <CheckCircle2 className="w-4 h-4 text-[#34c759] shrink-0" />
+          <div className="pt-6 border-t border-[#a4a6a9]/20 space-y-2.5">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#484d53]">
+              <CheckCircle2 className="w-4 h-4 text-[#0065bf] shrink-0" />
               <span>{isEn ? "Nationwide Project Delivery" : "Jangkauan Pengiriman Proyek Nasional"}</span>
             </div>
-            <div className="flex items-center gap-2 text-xs font-mono text-[#444444]">
-              <CheckCircle2 className="w-4 h-4 text-[#34c759] shrink-0" />
+            <div className="flex items-center gap-2 text-xs font-mono text-[#484d53]">
+              <CheckCircle2 className="w-4 h-4 text-[#0065bf] shrink-0" />
               <span>{isEn ? "Advanced 3D BIM Pre-Construction" : "Pra-Konstruksi Digital Berbasis 3D BIM"}</span>
             </div>
-            <div className="flex items-center gap-2 text-xs font-mono text-[#444444]">
-              <CheckCircle2 className="w-4 h-4 text-[#34c759] shrink-0" />
+            <div className="flex items-center gap-2 text-xs font-mono text-[#484d53]">
+              <CheckCircle2 className="w-4 h-4 text-[#0065bf] shrink-0" />
               <span>{isEn ? "Certified Quality Control & NDT Testing" : "Quality Control Berlapis & Uji NDT Terverifikasi"}</span>
             </div>
           </div>
         </div>
 
         {/* Misi Card (7 Cols) */}
-        <div className="lg:col-span-7 bg-[#ffffff] rounded-[28px] p-7 sm:p-9 border border-[#c6c6c6]/60 shadow-sm flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-[#ffffff] rounded-[28px] p-7 sm:p-9 border border-[#a4a6a9]/30 shadow-xs flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-6">
-              <div className="w-12 h-12 rounded-[12px] bg-[#000000] text-white flex items-center justify-center">
-                <Target className="w-6 h-6 text-[#fff100]" />
+              <div className="w-12 h-12 rounded-[12px] bg-[#012655] text-white flex items-center justify-center">
+                <Target className="w-6 h-6 text-[#0065bf]" />
               </div>
-              <Badge variant="yellow" size="sm">
+              <Badge variant="mint" size="sm">
                 {t("vm.missionLabel")}
               </Badge>
             </div>
 
-            <h3 className="font-condensed text-[28px] sm:text-[36px] font-bold uppercase tracking-tight text-[#000000] leading-none mb-6">
+            <h3 className="font-condensed text-[28px] sm:text-[36px] font-bold uppercase tracking-tight text-[#012655] leading-none mb-6">
               {t("vm.missionTitle")}
             </h3>
 
@@ -202,16 +202,16 @@ export function VisionMissionSection() {
               {missionPoints.map((item) => (
                 <div
                   key={item.num}
-                  className="flex items-start gap-3.5 p-3.5 rounded-[12px] bg-[#f8f8f8] hover:bg-[#f2f2f2] transition-colors border border-[#e5e5e5]"
+                  className="flex items-start gap-3.5 p-3.5 rounded-[12px] bg-[#f4f6f9] hover:bg-[#e8f0fe] transition-colors border border-[#a4a6a9]/20"
                 >
-                  <span className="font-mono text-xs font-bold text-[#000000] bg-[#e5e5e5] px-2 py-1 rounded-[4px] shrink-0 mt-0.5">
+                  <span className="font-mono text-xs font-bold text-white bg-[#012655] px-2 py-1 rounded-[4px] shrink-0 mt-0.5">
                     {item.num}
                   </span>
                   <div>
-                    <h4 className="font-bold text-sm text-[#000000] mb-0.5">
+                    <h4 className="font-bold text-sm text-[#012655] mb-0.5">
                       {item.title}
                     </h4>
-                    <p className="text-xs sm:text-[13px] text-[#555555] leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-[#484d53] leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -228,11 +228,11 @@ export function VisionMissionSection() {
           <Badge variant="ash" size="sm">
             {t("values.badge")}
           </Badge>
-          <span className="font-mono text-xs text-[#666666] uppercase">
+          <span className="font-mono text-xs text-[#71767c] uppercase">
             {isEn ? "Core Pillars" : "Pilar Utama Budaya Kerja"}
           </span>
         </div>
-        <h3 className="font-condensed text-[32px] sm:text-[44px] font-extrabold uppercase tracking-tight text-[#000000] leading-none mb-8">
+        <h3 className="font-condensed text-[32px] sm:text-[44px] font-extrabold uppercase tracking-tight text-[#012655] leading-none mb-8">
           {t("values.title")}
         </h3>
 
@@ -242,22 +242,22 @@ export function VisionMissionSection() {
             return (
               <div
                 key={val.code}
-                className="bg-[#ffffff] rounded-[20px] p-6 border border-[#c6c6c6]/60 hover:border-[#000000] transition-colors flex flex-col justify-between group shadow-sm"
+                className="bg-[#ffffff] rounded-[20px] p-6 border border-[#a4a6a9]/30 hover:border-[#0065bf] transition-colors flex flex-col justify-between group shadow-xs"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded-[8px] bg-[#000000] text-white flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-[#d1ffca]" />
+                    <div className="w-10 h-10 rounded-[8px] bg-[#012655] text-white flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-[#0065bf]" />
                     </div>
-                    <span className="font-mono text-xs text-[#888888] font-bold">
+                    <span className="font-mono text-xs text-[#71767c] font-bold">
                       /{val.code}
                     </span>
                   </div>
 
-                  <h4 className="font-condensed text-xl font-bold uppercase text-[#000000] mb-2 leading-tight">
+                  <h4 className="font-condensed text-xl font-bold uppercase text-[#012655] mb-2 leading-tight">
                     {val.title}
                   </h4>
-                  <p className="text-xs sm:text-[13px] text-[#555555] leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-[#484d53] leading-relaxed">
                     {val.desc}
                   </p>
                 </div>

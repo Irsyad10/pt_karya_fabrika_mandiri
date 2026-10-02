@@ -66,13 +66,13 @@ export function ComplianceSection() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Badge variant="mint">KEPATUHAN REGULASI &amp; LEGALITAS</Badge>
-              <span className="font-mono text-xs text-[#444444]">K3 &amp; SERTIFIKASI</span>
+              <span className="font-mono text-xs text-[#71767c]">K3 &amp; SERTIFIKASI</span>
             </div>
-            <h2 className="font-condensed text-[42px] sm:text-[64px] font-extrabold uppercase tracking-tight text-[#000000] leading-[0.9]">
+            <h2 className="font-condensed text-[42px] sm:text-[64px] font-extrabold uppercase tracking-tight text-[#012655] leading-[0.9]">
               STANDAR KESELAMATAN &amp; KUALIFIKASI TEKNIS
             </h2>
           </div>
-          <p className="text-[16px] text-[#444444] max-w-[460px] font-normal leading-relaxed">
+          <p className="text-[16px] text-[#484d53] max-w-[460px] font-normal leading-relaxed">
             Legalitas penuh, sertifikasi tenaga ahli terdaftar, serta kepatuhan
             pada standar industri nasional dan internasional demi melindungi investasi proyek Anda.
           </p>
@@ -83,28 +83,28 @@ export function ComplianceSection() {
           {certifications.map((cert, idx) => (
             <div
               key={idx}
-              className="bg-[#ffffff] rounded-[24px] p-6 border border-[#c6c6c6]/50 flat-card flex flex-col justify-between"
+              className="bg-[#ffffff] rounded-[24px] p-6 border border-[#a4a6a9]/30 flat-card flex flex-col justify-between hover:border-[#0065bf] transition-colors shadow-xs"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-bold text-[#000000] bg-[#d1ffca] px-2.5 py-1 rounded-[4px]">
+                  <span className="font-mono text-xs font-bold text-white bg-[#0065bf] px-2.5 py-1 rounded-[4px] shadow-xs">
                     {cert.code}
                   </span>
-                  <Award className="w-5 h-5 text-[#000000]" />
+                  <Award className="w-5 h-5 text-[#012655]" />
                 </div>
-                <h3 className="font-condensed text-[20px] font-bold uppercase tracking-tight text-[#000000] mb-1">
+                <h3 className="font-condensed text-[20px] font-bold uppercase tracking-tight text-[#012655] mb-1">
                   {cert.title}
                 </h3>
-                <span className="font-mono text-[11px] text-[#979797] uppercase block mb-3">
+                <span className="font-mono text-[11px] text-[#71767c] uppercase block mb-3">
                   {cert.org}
                 </span>
-                <p className="text-[13px] text-[#444444] leading-relaxed">
+                <p className="text-[13px] text-[#484d53] leading-relaxed">
                   {cert.desc}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#f3f3f3] flex items-center gap-2 text-xs font-mono text-[#000000]">
-                <CheckCircle className="w-4 h-4 text-[#34c759]" />
+              <div className="mt-6 pt-4 border-t border-[#a4a6a9]/20 flex items-center gap-2 text-xs font-mono text-[#012655]">
+                <CheckCircle className="w-4 h-4 text-[#0065bf]" />
                 <span>AKTIF &amp; TERVERIFIKASI</span>
               </div>
             </div>
@@ -112,28 +112,28 @@ export function ComplianceSection() {
         </div>
 
         {/* Competent Experts Box */}
-        <div className="bg-[#ffffff] rounded-[32px] p-8 sm:p-10 border border-[#c6c6c6]/60 flat-card">
+        <div className="bg-[#ffffff] rounded-[32px] p-8 sm:p-10 border border-[#a4a6a9]/30 flat-card shadow-xs">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4">
-              <span className="font-mono text-xs text-[#979797] uppercase tracking-wider block mb-2">
+              <span className="font-mono text-xs text-[#0065bf] uppercase tracking-wider block mb-2 font-bold">
                 TENAGA AHLI KOMPETEN
               </span>
-              <h3 className="font-condensed text-[32px] sm:text-[40px] font-extrabold uppercase text-[#000000] leading-tight mb-4">
+              <h3 className="font-condensed text-[32px] sm:text-[40px] font-extrabold uppercase text-[#012655] leading-tight mb-4">
                 DITANGANI LANGSUNG OLEH PRAKTISI BERLISENSI
               </h3>
-              <p className="text-[15px] text-[#444444] leading-relaxed mb-6 font-normal">
+              <p className="text-[15px] text-[#484d53] leading-relaxed mb-6 font-normal">
                 Setiap proyek dipimpin oleh Project Manager bersertifikat dan
                 didampingi tim engineer lintas disiplin sipil, struktur, mesin, dan K3.
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#000000] text-white flex items-center justify-center">
-                  <Users className="w-5 h-5 text-[#d1ffca]" />
+                <div className="w-10 h-10 rounded-full bg-[#012655] text-white flex items-center justify-center">
+                  <Users className="w-5 h-5 text-[#60a5fa]" />
                 </div>
                 <div>
-                  <span className="font-condensed text-xl font-bold uppercase text-[#000000] block leading-none">
+                  <span className="font-condensed text-xl font-bold uppercase text-[#012655] block leading-none">
                     45+ PERSONEL TEKNIS
                   </span>
-                  <span className="font-mono text-xs text-[#979797]">
+                  <span className="font-mono text-xs text-[#71767c]">
                     In-House Engineers &amp; Specialists
                   </span>
                 </div>
@@ -144,15 +144,15 @@ export function ComplianceSection() {
               {expertises.map((exp, eIdx) => (
                 <div
                   key={eIdx}
-                  className="bg-[#f3f3f3] p-5 rounded-[20px] border border-[#e5e5e5] hover:border-[#000000] transition-colors"
+                  className="bg-[#f4f6f9] p-5 rounded-[20px] border border-[#a4a6a9]/20 hover:border-[#0065bf] transition-colors"
                 >
                   <div className="flex items-center gap-2.5 mb-2">
-                    <ShieldCheck className="w-5 h-5 text-[#000000]" />
-                    <h4 className="font-bold text-[15px] text-[#000000] leading-snug">
+                    <ShieldCheck className="w-5 h-5 text-[#0065bf]" />
+                    <h4 className="font-bold text-[15px] text-[#012655] leading-snug">
                       {exp.title}
                     </h4>
                   </div>
-                  <p className="text-[13px] text-[#444444] leading-relaxed">
+                  <p className="text-[13px] text-[#484d53] leading-relaxed">
                     {exp.body}
                   </p>
                 </div>

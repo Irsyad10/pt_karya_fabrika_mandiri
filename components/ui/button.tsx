@@ -17,13 +17,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantClasses = {
       primary:
-        "bg-[#000000] text-[#ffffff] rounded-[8px] hover:bg-[#2f2f2f] active:scale-[0.98] transition-all duration-150 font-medium tracking-tight",
+        "bg-[#012655] text-[#ffffff] rounded-[8px] hover:bg-[#0065bf] active:scale-[0.98] transition-all duration-150 font-medium tracking-tight shadow-sm",
       ghost:
-        "bg-transparent text-[#444444] border-[1.5px] border-[#444444] rounded-[6px] hover:border-[#000000] hover:text-[#000000] hover:bg-[#f3f3f3] active:scale-[0.98] transition-all duration-150 font-medium tracking-tight",
+        "bg-transparent text-[#484d53] border-[1.5px] border-[#a4a6a9] rounded-[6px] hover:border-[#012655] hover:text-[#012655] hover:bg-[#0065bf]/5 active:scale-[0.98] transition-all duration-150 font-medium tracking-tight",
       mint:
-        "bg-[#d1ffca] text-[#000000] rounded-[8px] hover:bg-[#bbf0b3] active:scale-[0.98] transition-all duration-150 font-semibold tracking-tight",
+        "bg-[#0065bf] text-[#ffffff] rounded-[8px] hover:bg-[#012655] active:scale-[0.98] transition-all duration-150 font-semibold tracking-tight shadow-sm",
       link:
-        "bg-transparent text-[#000000] p-0 underline-offset-4 hover:underline font-medium",
+        "bg-transparent text-[#0065bf] p-0 underline-offset-4 hover:underline font-medium",
       "outline-white":
         "bg-transparent text-[#ffffff] border-[1.5px] border-[#ffffff]/60 rounded-[6px] hover:border-[#ffffff] hover:bg-[#ffffff]/10 active:scale-[0.98] transition-all duration-150 font-medium tracking-tight",
     };

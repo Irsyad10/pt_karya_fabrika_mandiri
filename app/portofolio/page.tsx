@@ -274,17 +274,17 @@ export default function PortfolioPage() {
       : projects.filter((item) => item.category === filter);
 
   return (
-    <div className="min-h-screen bg-[#e5e5e5] text-[#000000] selection:bg-[#d1ffca] selection:text-black">
+    <div className="min-h-screen bg-[#f4f6f9] text-[#012655] selection:bg-[#0065bf] selection:text-white">
       <Navbar />
 
       {/* Header Banner */}
-      <section className="bg-[#000000] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#2f2f2f]">
+      <section className="bg-gradient-to-b from-[#012655] to-[#001a3d] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#0065bf]/20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2 mb-4">
             <Badge variant="mint" size="sm">
               {isEn ? "PROVEN TRACK RECORD" : "REKAM JEJAK PEKERJAAN KAMI"}
             </Badge>
-            <span className="font-mono text-xs text-[#979797]">
+            <span className="font-mono text-xs text-[#a4a6a9]">
               {isEn ? "VERIFIED PROJECT GALLERY" : "DOKUMENTASI PROYEK NYATA"}
             </span>
           </div>
@@ -295,7 +295,7 @@ export default function PortfolioPage() {
               : "PORTOFOLIO STRUKTUR BAJA & GUDANG"}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#c6c6c6] max-w-3xl leading-relaxed font-normal mb-8">
+          <p className="text-base sm:text-lg text-[#a4a6a9] max-w-3xl leading-relaxed font-normal mb-8">
             {isEn
               ? "Explore our portfolio of industrial warehouses, manufacturing facilities, heavy steel erections, and precision workshop fabrications delivered across key industrial regions in Indonesia with high precision and zero accident safety."
               : "Jelajahi portofolio proyek konstruksi gudang industri, pabrik manufaktur, ereksi rangka baja berat, dan fabrikasi presisi yang telah kami selesaikan dengan standar mutu SNI/ASTM, ketepatan waktu, dan rekor Zero Accident K3."}
@@ -304,7 +304,7 @@ export default function PortfolioPage() {
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl pt-6 border-t border-white/20">
             <div>
-              <span className="font-mono text-xs text-[#979797] uppercase block">
+              <span className="font-mono text-xs text-[#a4a6a9] uppercase block">
                 {isEn ? "Steel Erected" : "Baja Terpasang"}
               </span>
               <span className="font-condensed text-2xl sm:text-3xl font-extrabold text-[#ffffff]">
@@ -312,23 +312,23 @@ export default function PortfolioPage() {
               </span>
             </div>
             <div>
-              <span className="font-mono text-xs text-[#979797] uppercase block">
+              <span className="font-mono text-xs text-[#a4a6a9] uppercase block">
                 {isEn ? "Total Area Built" : "Total Luas Gedung"}
               </span>
-              <span className="font-condensed text-2xl sm:text-3xl font-extrabold text-[#d1ffca]">
+              <span className="font-condensed text-2xl sm:text-3xl font-extrabold text-[#60a5fa]">
                 280,000+ m²
               </span>
             </div>
             <div>
-              <span className="font-mono text-xs text-[#979797] uppercase block">
+              <span className="font-mono text-xs text-[#a4a6a9] uppercase block">
                 {isEn ? "Safety Record" : "Rekor K3 Nasional"}
               </span>
-              <span className="font-condensed text-2xl sm:text-3xl font-extrabold text-[#fff100]">
+              <span className="font-condensed text-2xl sm:text-3xl font-extrabold text-[#60a5fa]">
                 100% Zero Accident
               </span>
             </div>
             <div>
-              <span className="font-mono text-xs text-[#979797] uppercase block">
+              <span className="font-mono text-xs text-[#a4a6a9] uppercase block">
                 {isEn ? "Schedule Adherence" : "Ketepatan Jadwal"}
               </span>
               <span className="font-condensed text-2xl sm:text-3xl font-extrabold text-[#ffffff]">
@@ -342,7 +342,7 @@ export default function PortfolioPage() {
       {/* Filter Tabs & Gallery Grid */}
       <section className="py-12 sm:py-20 max-w-[1280px] mx-auto px-4 sm:px-6">
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-[#c6c6c6]">
+        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-[#a4a6a9]/30">
           {[
             { id: "all", label: isEn ? "All Projects" : "Semua Proyek" },
             { id: "warehouse", label: isEn ? "Industrial Warehouses" : "Gudang Logistik" },
@@ -355,8 +355,8 @@ export default function PortfolioPage() {
               onClick={() => setFilter(cat.id)}
               className={`px-4 py-2 rounded-full text-xs font-mono font-medium transition-all ${
                 filter === cat.id
-                  ? "bg-[#000000] text-[#ffffff] shadow-sm font-bold"
-                  : "bg-[#ffffff] text-[#555555] hover:text-[#000000] border border-[#c6c6c6]"
+                  ? "bg-[#012655] text-[#ffffff] shadow-sm font-bold hover:bg-[#0065bf]"
+                  : "bg-[#ffffff] text-[#484d53] hover:text-[#012655] border border-[#a4a6a9]/40"
               }`}
             >
               {cat.label}
@@ -369,11 +369,11 @@ export default function PortfolioPage() {
           {filteredProjects.map((item) => (
             <div
               key={item.id}
-              className="bg-[#ffffff] rounded-[24px] overflow-hidden border border-[#c6c6c6]/60 hover:border-[#000000] transition-all group flex flex-col justify-between shadow-sm"
+              className="bg-[#ffffff] rounded-[24px] overflow-hidden border border-[#a4a6a9]/30 hover:border-[#0065bf] transition-all group flex flex-col justify-between shadow-sm"
             >
               <div>
                 {/* Image Container */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#e5e5e5]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#f4f6f9]">
                   <Image
                     src={item.image}
                     alt={isEn ? item.titleEn : item.titleId}
@@ -381,17 +381,17 @@ export default function PortfolioPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#012655]/70 via-transparent to-transparent opacity-80" />
 
                   {/* Status Badge */}
                   <div className="absolute top-3 left-3">
-                    <span className="px-3 py-1 rounded-[4px] bg-[#000000]/80 backdrop-blur-md text-[#d1ffca] font-mono text-[11px] font-semibold border border-white/10">
+                    <span className="px-3 py-1 rounded-[4px] bg-[#012655]/85 backdrop-blur-md text-[#60a5fa] font-mono text-[11px] font-semibold border border-white/10">
                       {isEn ? item.statusEn : item.statusId}
                     </span>
                   </div>
 
                   <div className="absolute bottom-3 right-3">
-                    <span className="px-2.5 py-1 rounded-[4px] bg-[#fff100] text-[#000000] font-mono text-[11px] font-bold">
+                    <span className="px-2.5 py-1 rounded-[4px] bg-[#0065bf] text-white font-mono text-[11px] font-bold shadow-sm">
                       {item.tonnage}
                     </span>
                   </div>
@@ -399,32 +399,32 @@ export default function PortfolioPage() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <div className="flex items-center gap-2 font-mono text-[11px] text-[#666666] mb-2">
-                    <MapPin className="w-3.5 h-3.5 text-[#333333] shrink-0" />
+                  <div className="flex items-center gap-2 font-mono text-[11px] text-[#484d53] mb-2">
+                    <MapPin className="w-3.5 h-3.5 text-[#0065bf] shrink-0" />
                     <span className="truncate">{item.location}</span>
                   </div>
 
-                  <h3 className="font-condensed text-[24px] sm:text-[26px] font-bold uppercase text-[#000000] leading-tight mb-2 group-hover:text-[#2f2f2f] transition-colors">
+                  <h3 className="font-condensed text-[24px] sm:text-[26px] font-bold uppercase text-[#012655] leading-tight mb-2 group-hover:text-[#0065bf] transition-colors">
                     {isEn ? item.titleEn : item.titleId}
                   </h3>
 
-                  <p className="text-xs text-[#555555] line-clamp-2 leading-relaxed mb-4">
+                  <p className="text-xs text-[#484d53] line-clamp-2 leading-relaxed mb-4">
                     {isEn ? item.descEn : item.descId}
                   </p>
 
                   {/* Specs Quick Row */}
-                  <div className="grid grid-cols-2 gap-2 pt-3 border-t border-[#f0f0f0] text-xs font-mono">
+                  <div className="grid grid-cols-2 gap-2 pt-3 border-t border-[#f0f3f7] text-xs font-mono">
                     <div>
-                      <span className="text-[#888888] block text-[10px] uppercase">
+                      <span className="text-[#a4a6a9] block text-[10px] uppercase">
                         {isEn ? "Building Area" : "Luas Bangunan"}
                       </span>
-                      <span className="font-bold text-[#000000]">{item.area}</span>
+                      <span className="font-bold text-[#012655]">{item.area}</span>
                     </div>
                     <div>
-                      <span className="text-[#888888] block text-[10px] uppercase">
+                      <span className="text-[#a4a6a9] block text-[10px] uppercase">
                         {isEn ? "Year" : "Tahun"}
                       </span>
-                      <span className="font-bold text-[#000000]">{item.year}</span>
+                      <span className="font-bold text-[#012655]">{item.year}</span>
                     </div>
                   </div>
                 </div>
@@ -439,7 +439,7 @@ export default function PortfolioPage() {
                   className="w-full justify-between text-xs py-2.5 rounded-[8px]"
                 >
                   <span>{isEn ? "View Project Details" : "Lihat Spesifikasi Lengkap"}</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-[#d1ffca]" />
+                  <ExternalLink className="w-3.5 h-3.5 text-white" />
                 </Button>
               </div>
             </div>
@@ -450,10 +450,10 @@ export default function PortfolioPage() {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="relative w-full max-w-3xl bg-[#ffffff] rounded-[28px] border border-[#c6c6c6] shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-3xl bg-[#ffffff] rounded-[28px] border border-[#a4a6a9]/30 shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-5 right-5 p-2 rounded-full hover:bg-[#f3f3f3] text-[#444444] hover:text-[#000000] transition-colors"
+              className="absolute top-5 right-5 p-2 rounded-full hover:bg-[#f0f4f9] text-[#484d53] hover:text-[#012655] transition-colors"
               aria-label="Tutup"
             >
               <X className="w-5 h-5" />
@@ -465,22 +465,22 @@ export default function PortfolioPage() {
                 <Badge variant="mint" size="sm">
                   {isEn ? selectedProject.statusEn : selectedProject.statusId}
                 </Badge>
-                <span className="font-mono text-xs text-[#888888]">
+                <span className="font-mono text-xs text-[#a4a6a9]">
                   KFM REF: {selectedProject.id.toUpperCase()}
                 </span>
               </div>
-              <h3 className="font-condensed text-2xl sm:text-3xl font-black uppercase text-[#000000]">
+              <h3 className="font-condensed text-2xl sm:text-3xl font-black uppercase text-[#012655]">
                 {isEn ? selectedProject.titleEn : selectedProject.titleId}
               </h3>
-              <p className="font-mono text-xs text-[#666666] flex items-center gap-1.5 mt-1">
-                <MapPin className="w-3.5 h-3.5 text-[#333333]" />
+              <p className="font-mono text-xs text-[#484d53] flex items-center gap-1.5 mt-1">
+                <MapPin className="w-3.5 h-3.5 text-[#0065bf]" />
                 <span>{selectedProject.location}</span>
                 <span>• {selectedProject.year}</span>
               </p>
             </div>
 
             {/* Modal Image */}
-            <div className="relative aspect-[16/9] rounded-[18px] overflow-hidden bg-[#e5e5e5] mb-6 border border-[#c6c6c6]/50">
+            <div className="relative aspect-[16/9] rounded-[18px] overflow-hidden bg-[#f4f6f9] mb-6 border border-[#a4a6a9]/30">
               <Image
                 src={selectedProject.image}
                 alt={isEn ? selectedProject.titleEn : selectedProject.titleId}
@@ -492,11 +492,11 @@ export default function PortfolioPage() {
             {/* Specs Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-6">
               {selectedProject.specs.map((sp, sIdx) => (
-                <div key={sIdx} className="p-3 rounded-[10px] bg-[#f8f8f8] border border-[#e5e5e5]">
-                  <span className="font-mono text-[10px] text-[#888888] uppercase block">
+                <div key={sIdx} className="p-3 rounded-[10px] bg-[#f8f9fc] border border-[#a4a6a9]/30">
+                  <span className="font-mono text-[10px] text-[#a4a6a9] uppercase block">
                     {sp.label}
                   </span>
-                  <span className="font-bold text-xs text-[#000000] block mt-0.5">
+                  <span className="font-bold text-xs text-[#012655] block mt-0.5">
                     {sp.val}
                   </span>
                 </div>
@@ -505,23 +505,23 @@ export default function PortfolioPage() {
 
             {/* Description */}
             <div className="mb-6">
-              <h4 className="font-mono text-xs uppercase font-bold text-[#000000] mb-1.5">
+              <h4 className="font-mono text-xs uppercase font-bold text-[#012655] mb-1.5">
                 {isEn ? "Project Overview:" : "Deskripsi Teknis Proyek:"}
               </h4>
-              <p className="text-xs sm:text-sm text-[#444444] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#484d53] leading-relaxed">
                 {isEn ? selectedProject.descEn : selectedProject.descId}
               </p>
             </div>
 
             {/* Scope */}
             <div className="mb-6">
-              <h4 className="font-mono text-xs uppercase font-bold text-[#000000] mb-2">
+              <h4 className="font-mono text-xs uppercase font-bold text-[#012655] mb-2">
                 {isEn ? "Scope of Work Executed:" : "Ruang Lingkup Pekerjaan KFM:"}
               </h4>
               <div className="space-y-1.5">
                 {(isEn ? selectedProject.scopeEn : selectedProject.scopeId).map((sc, scIdx) => (
-                  <div key={scIdx} className="flex items-start gap-2 text-xs text-[#444444]">
-                    <CheckCircle2 className="w-4 h-4 text-[#34c759] shrink-0 mt-0.5" />
+                  <div key={scIdx} className="flex items-start gap-2 text-xs text-[#484d53]">
+                    <CheckCircle2 className="w-4 h-4 text-[#0065bf] shrink-0 mt-0.5" />
                     <span>{sc}</span>
                   </div>
                 ))}
@@ -529,8 +529,8 @@ export default function PortfolioPage() {
             </div>
 
             {/* Action */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-[#e5e5e5]">
-              <span className="font-mono text-xs text-[#777777]">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-[#f0f3f7]">
+              <span className="font-mono text-xs text-[#484d53]">
                 {isEn ? "Need a similar structure for your facility?" : "Ingin konsultasi proyek sejenis?"}
               </span>
               <div className="flex items-center gap-2 w-full sm:w-auto">
@@ -541,7 +541,7 @@ export default function PortfolioPage() {
                 >
                   <Button variant="primary" size="sm" className="w-full text-xs">
                     <span>{isEn ? "Consult This Design" : "Konsultasi Desain Serupa"}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#d1ffca]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-white" />
                   </Button>
                 </Link>
                 <Button
@@ -560,7 +560,7 @@ export default function PortfolioPage() {
 
       {/* Bottom CTA */}
       <section className="py-16 max-w-[1280px] mx-auto px-4 sm:px-6">
-        <div className="bg-[#000000] text-white rounded-[32px] p-8 sm:p-12 border border-[#2f2f2f] shadow-lg flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="bg-gradient-to-br from-[#012655] to-[#001a3d] text-white rounded-[32px] p-8 sm:p-12 border border-[#0065bf]/30 shadow-lg flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <Badge variant="mint" size="sm" className="mb-2">
               {isEn ? "START YOUR PROJECT" : "RENCANAKAN PROYEK ANDA"}
@@ -568,7 +568,7 @@ export default function PortfolioPage() {
             <h3 className="font-condensed text-[32px] sm:text-[46px] font-black uppercase text-white leading-none mb-2">
               {isEn ? "HAVE A CONSTRUCTION TENDER OR INQUIRY?" : "MEMILIKI KEBUTUHAN TENDER ATAU PEMBANGUNAN GUDANG?"}
             </h3>
-            <p className="text-sm text-[#979797] max-w-xl">
+            <p className="text-sm text-[#a4a6a9] max-w-xl">
               {isEn
                 ? "Send us your structural drawings or specifications for a free preliminary engineering review and estimated cost breakdown."
                 : "Kirimkan gambar teknis atau spesifikasi kebutuhan Anda untuk review rekayasa awal dan penawaran estimasi Rencana Anggaran Biaya (RAB)."}
@@ -577,7 +577,7 @@ export default function PortfolioPage() {
 
           <div className="shrink-0 flex gap-3 w-full md:w-auto">
             <Link href="/contact-us" className="w-full sm:w-auto">
-              <Button variant="mint" size="lg" className="w-full sm:w-auto text-black font-bold">
+              <Button variant="mint" size="lg" className="w-full sm:w-auto text-white font-bold shadow-md">
                 <span>{isEn ? "Request Quotation" : "Minta Penawaran RAB"}</span>
               </Button>
             </Link>

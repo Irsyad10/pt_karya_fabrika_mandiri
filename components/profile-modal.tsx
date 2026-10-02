@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { X, Download, FileText, CheckCircle2, ShieldCheck, Building2, PhoneCall } from "lucide-react";
+import Image from "next/image";
+import { X, Download, FileText, CheckCircle2, ShieldCheck, PhoneCall } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
@@ -92,20 +93,26 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-2xl bg-[#ffffff] rounded-[24px] border border-[#c6c6c6] shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-2xl bg-[#ffffff] rounded-[24px] border border-[#a4a6a9]/40 shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full hover:bg-[#f3f3f3] text-[#444444] hover:text-[#000000] transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full hover:bg-[#f4f6f9] text-[#484d53] hover:text-[#012655] transition-colors"
           aria-label="Tutup"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Header */}
-        <div className="flex items-start gap-4 mb-6 pb-6 border-b border-[#e5e5e5]">
-          <div className="w-12 h-12 rounded-[10px] bg-[#000000] text-white flex items-center justify-center shrink-0">
-            <Building2 className="w-6 h-6 text-[#d1ffca]" />
+        <div className="flex items-start gap-4 mb-6 pb-6 border-b border-[#a4a6a9]/20">
+          <div className="w-14 h-12 rounded-[10px] bg-white border border-[#a4a6a9]/30 p-1 flex items-center justify-center shrink-0 shadow-xs">
+            <Image
+              src="/images/kfm-logo-transparent.png"
+              alt="PT. KARYA FABRIKA MANDIRI Logo"
+              width={100}
+              height={70}
+              className="h-9 w-auto object-contain"
+            />
           </div>
           <div>
             <div className="flex items-center gap-2 flex-wrap mb-1">
@@ -116,10 +123,10 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
                 EDISI 2026
               </Badge>
             </div>
-            <h3 className="font-condensed text-2xl sm:text-3xl font-bold uppercase tracking-tight text-[#000000]">
+            <h3 className="font-condensed text-2xl sm:text-3xl font-bold uppercase tracking-tight text-[#012655]">
               PT. KARYA FABRIKA MANDIRI
             </h3>
-            <p className="font-mono text-xs text-[#666666]">
+            <p className="font-mono text-xs text-[#71767c]">
               Engineering · Construction · Material Supply · Precision Manufacturing
             </p>
           </div>
@@ -221,12 +228,12 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <Button
-              variant="primary"
+              variant="mint"
               size="md"
               onClick={handleDownload}
-              className="w-full sm:w-auto gap-2 text-xs"
+              className="w-full sm:w-auto gap-2 text-xs shadow-xs"
             >
-              <Download className="w-4 h-4 text-[#d1ffca]" />
+              <Download className="w-4 h-4 text-white" />
               <span>{isEn ? "Print / Save Profile" : "Cetak / Simpan Profil (PDF)"}</span>
             </Button>
             <Button

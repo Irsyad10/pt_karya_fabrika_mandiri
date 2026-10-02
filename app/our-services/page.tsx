@@ -277,17 +277,17 @@ export default function OurServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e5e5e5] text-[#000000] selection:bg-[#d1ffca] selection:text-black">
+    <div className="min-h-screen bg-[#f4f6f9] text-[#012655] selection:bg-[#0065bf] selection:text-white">
       <Navbar />
 
       {/* Page Header Banner */}
-      <section className="bg-[#000000] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#2f2f2f] relative overflow-hidden">
+      <section className="bg-gradient-to-b from-[#012655] to-[#001a3d] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#0065bf]/20 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 relative z-10">
           <div className="flex items-center gap-2 mb-4">
             <Badge variant="mint" size="sm">
               {isEn ? "COMPREHENSIVE SERVICES" : "LAYANAN TEKNIS & EPC TERPADU"}
             </Badge>
-            <span className="font-mono text-xs text-[#979797]">
+            <span className="font-mono text-xs text-[#a4a6a9]">
               {isEn ? "END-TO-END CAPABILITY" : "DARI TAHAP AWAL HINGGA HANDOVER"}
             </span>
           </div>
@@ -298,7 +298,7 @@ export default function OurServicesPage() {
               : "SOLUSI REKAYASA, KONSTRUKSI & MANUFAKTUR PRESISI"}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#c6c6c6] max-w-3xl leading-relaxed font-normal mb-8">
+          <p className="text-base sm:text-lg text-[#a4a6a9] max-w-3xl leading-relaxed font-normal mb-8">
             {isEn
               ? "PT. Karya Fabrika Mandiri delivers end-to-end industrial structural solutions. We combine advanced 3D BIM pre-construction with high-tonnage workshop fabrication and zero-accident site erection to build durable warehouses, plants, and complex steel structures."
               : "PT. Karya Fabrika Mandiri menghadirkan kapabilitas terpadu untuk rancang bangun industri. Mengombinasikan pemodelan digital 3D BIM, workshop manufaktur presisi bertoleransi tinggi, serta ereksi lapangan berstandar K3 untuk menghasilkan gedung gudang dan pabrik yang kokoh, efisien, dan tahan gempa."}
@@ -306,9 +306,9 @@ export default function OurServicesPage() {
 
           <div className="flex flex-wrap items-center gap-4">
             <Link href="/contact-us">
-              <Button variant="mint" size="lg" className="rounded-[8px] px-8 text-black font-bold text-sm">
+              <Button variant="mint" size="lg" className="rounded-[8px] px-8 text-white font-bold text-sm shadow-md gap-2">
                 <span>{isEn ? "Request Technical Consultation" : "Konsultasi Kebutuhan Teknis"}</span>
-                <ArrowRight className="w-4 h-4 text-black" />
+                <ArrowRight className="w-4 h-4 text-white" />
               </Button>
             </Link>
             <a
@@ -330,7 +330,7 @@ export default function OurServicesPage() {
           <Badge variant="ash" size="sm" className="mb-2">
             {isEn ? "CORE PILLARS" : "6 LAYANAN UTAMA KAMI"}
           </Badge>
-          <h2 className="font-condensed text-[36px] sm:text-[52px] font-extrabold uppercase tracking-tight text-[#000000] leading-none">
+          <h2 className="font-condensed text-[36px] sm:text-[52px] font-extrabold uppercase tracking-tight text-[#012655] leading-none">
             {isEn ? "INDUSTRIAL SERVICES PORTFOLIO" : "SPESIFIKASI LAYANAN TERPADU"}
           </h2>
         </div>
@@ -344,7 +344,7 @@ export default function OurServicesPage() {
               <div
                 key={item.id}
                 id={item.id}
-                className="bg-[#ffffff] rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 border border-[#c6c6c6]/60 shadow-sm"
+                className="bg-[#ffffff] rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 border border-[#a4a6a9]/30 shadow-sm"
               >
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center ${
                   isReversed ? "lg:flex-row-reverse" : ""
@@ -352,51 +352,51 @@ export default function OurServicesPage() {
                   {/* Left Column: Details & Capabilities */}
                   <div className={`lg:col-span-7 ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-[10px] bg-[#000000] text-white flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-[#d1ffca]" />
+                      <div className="w-12 h-12 rounded-[10px] bg-[#012655] text-white flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-[#60a5fa]" />
                       </div>
                       <div>
-                        <span className="font-mono text-xs text-[#888888] font-bold block">
+                        <span className="font-mono text-xs text-[#a4a6a9] font-bold block">
                           SERVICE /{item.num}
                         </span>
-                        <span className="font-mono text-xs text-[#000000] font-semibold">
+                        <span className="font-mono text-xs text-[#012655] font-semibold">
                           PT. KARYA FABRIKA MANDIRI
                         </span>
                       </div>
                     </div>
 
-                    <h3 className="font-condensed text-[30px] sm:text-[40px] font-extrabold uppercase tracking-tight text-[#000000] leading-[0.95] mb-2">
+                    <h3 className="font-condensed text-[30px] sm:text-[40px] font-extrabold uppercase tracking-tight text-[#012655] leading-[0.95] mb-2">
                       {isEn ? item.titleEn : item.titleId}
                     </h3>
-                    <p className="font-mono text-xs sm:text-sm text-[#555555] font-semibold mb-4">
+                    <p className="font-mono text-xs sm:text-sm text-[#0065bf] font-semibold mb-4">
                       {isEn ? item.subtitleEn : item.subtitleId}
                     </p>
 
-                    <p className="text-[14px] sm:text-[15px] text-[#444444] leading-relaxed mb-6">
+                    <p className="text-[14px] sm:text-[15px] text-[#484d53] leading-relaxed mb-6">
                       {isEn ? item.descEn : item.descId}
                     </p>
 
                     {/* Capabilities Checklist */}
                     <div className="space-y-2.5 mb-6">
-                      <span className="font-mono text-xs uppercase text-[#000000] font-bold tracking-wider block mb-2">
+                      <span className="font-mono text-xs uppercase text-[#012655] font-bold tracking-wider block mb-2">
                         {isEn ? "Key Capabilities & Outputs:" : "Cakupan Pekerjaan & Keunggulan:"}
                       </span>
                       {item.capabilities.map((cap, cIdx) => (
-                        <div key={cIdx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-[#444444]">
-                          <CheckCircle2 className="w-4 h-4 text-[#34c759] shrink-0 mt-0.5" />
+                        <div key={cIdx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-[#484d53]">
+                          <CheckCircle2 className="w-4 h-4 text-[#0065bf] shrink-0 mt-0.5" />
                           <span>{cap}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* Specs Pills */}
-                    <div className="grid grid-cols-3 gap-2 pt-4 border-t border-[#e5e5e5]">
+                    <div className="grid grid-cols-3 gap-2 pt-4 border-t border-[#f0f3f7]">
                       {item.specs.map((sp, sIdx) => (
-                        <div key={sIdx} className="p-2.5 rounded-[8px] bg-[#f8f8f8] border border-[#e5e5e5]">
-                          <span className="font-mono text-[10px] text-[#888888] block uppercase">
+                        <div key={sIdx} className="p-2.5 rounded-[8px] bg-[#f8f9fc] border border-[#a4a6a9]/30">
+                          <span className="font-mono text-[10px] text-[#a4a6a9] block uppercase">
                             {sp.label}
                           </span>
-                          <span className="font-bold text-xs text-[#000000] block truncate">
+                          <span className="font-bold text-xs text-[#012655] block truncate">
                             {sp.val}
                           </span>
                         </div>
@@ -406,7 +406,7 @@ export default function OurServicesPage() {
 
                   {/* Right Column: Visual Showcase */}
                   <div className={`lg:col-span-5 ${isReversed ? "lg:order-1" : "lg:order-2"}`}>
-                    <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden border border-[#c6c6c6]/50 bg-[#e5e5e5] group shadow-inner">
+                    <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden border border-[#a4a6a9]/30 bg-[#f4f6f9] group shadow-inner">
                       <Image
                         src={item.image}
                         alt={isEn ? item.titleEn : item.titleId}
@@ -414,16 +414,16 @@ export default function OurServicesPage() {
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                         sizes="(max-width: 1024px) 100vw, 40vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#012655]/70 via-transparent to-black/20" />
                       
                       <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white font-mono text-xs">
-                        <span className="px-2.5 py-1 rounded-[4px] bg-black/70 backdrop-blur-md">
+                        <span className="px-2.5 py-1 rounded-[4px] bg-[#012655]/85 backdrop-blur-md border border-white/10">
                           DOC: KFM-{item.num}
                         </span>
                         <Link href="/contact-us">
-                          <span className="px-3 py-1 rounded-[4px] bg-[#d1ffca] text-black font-bold flex items-center gap-1 hover:bg-white transition-colors">
+                          <span className="px-3 py-1 rounded-[4px] bg-[#0065bf] text-white font-bold flex items-center gap-1 hover:bg-[#012655] transition-colors shadow-sm">
                             <span>{isEn ? "Inquire" : "Tanya"}</span>
-                            <ArrowUpRight className="w-3.5 h-3.5" />
+                            <ArrowUpRight className="w-3.5 h-3.5 text-white" />
                           </span>
                         </Link>
                       </div>
@@ -437,7 +437,7 @@ export default function OurServicesPage() {
       </section>
 
       {/* Integrated Delivery Workflow (5 Stages) */}
-      <section className="py-16 sm:py-24 bg-[#000000] text-white">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-[#012655] to-[#001a3d] text-white border-t border-[#0065bf]/20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
@@ -448,7 +448,7 @@ export default function OurServicesPage() {
                 {isEn ? "5-STAGE INTEGRATED WORKFLOW" : "5 TAHAP PELAKSANAAN PROYEK"}
               </h2>
             </div>
-            <p className="text-sm text-[#979797] max-w-[420px] leading-relaxed">
+            <p className="text-sm text-[#a4a6a9] max-w-[420px] leading-relaxed">
               {isEn
                 ? "Every project adheres to a disciplined multi-stage protocol to ensure schedule predictability, safety adherence, and zero rework."
                 : "Setiap proyek dijalankan melalui tahapan terstruktur dengan pengawasan ketat, memastikan jadwal tepat waktu dan hasil pekerjaan berstandar tinggi."}
@@ -459,19 +459,19 @@ export default function OurServicesPage() {
             {workflowSteps.map((wf) => (
               <div
                 key={wf.step}
-                className="bg-[#171717] rounded-[20px] p-5 border border-[#2f2f2f] flex flex-col justify-between"
+                className="bg-[#001a3d]/80 rounded-[20px] p-5 border border-[#0065bf]/30 backdrop-blur-sm flex flex-col justify-between shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-sm font-bold text-[#d1ffca]">
+                    <span className="font-mono text-sm font-bold text-[#60a5fa]">
                       /{wf.step}
                     </span>
-                    <span className="w-2 h-2 rounded-full bg-[#d1ffca]" />
+                    <span className="w-2 h-2 rounded-full bg-[#60a5fa]" />
                   </div>
                   <h3 className="font-condensed text-xl font-bold uppercase text-white mb-2 leading-tight">
                     {wf.title}
                   </h3>
-                  <p className="text-xs text-[#979797] leading-relaxed">
+                  <p className="text-xs text-[#a4a6a9] leading-relaxed">
                     {wf.desc}
                   </p>
                 </div>
@@ -483,15 +483,15 @@ export default function OurServicesPage() {
 
       {/* CTA Inverted Banner */}
       <section className="py-16 max-w-[1280px] mx-auto px-4 sm:px-6">
-        <div className="bg-[#ffffff] rounded-[32px] p-8 sm:p-12 border border-[#c6c6c6]/60 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="bg-[#ffffff] rounded-[32px] p-8 sm:p-12 border border-[#a4a6a9]/30 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <Badge variant="mint" size="sm" className="mb-2">
               {isEn ? "GET IN TOUCH" : "KONSULTASI GRATIS"}
             </Badge>
-            <h3 className="font-condensed text-[32px] sm:text-[46px] font-black uppercase tracking-tight text-[#000000] leading-none mb-2">
+            <h3 className="font-condensed text-[32px] sm:text-[46px] font-black uppercase tracking-tight text-[#012655] leading-none mb-2">
               {isEn ? "READY TO BUILD YOUR NEXT INDUSTRIAL FACILITY?" : "SIAP MEMULAI PROYEK STRUKTUR BAJA ANDA?"}
             </h3>
-            <p className="text-sm sm:text-base text-[#555555] max-w-xl">
+            <p className="text-sm sm:text-base text-[#484d53] max-w-xl">
               {isEn
                 ? "Contact our engineering team to discuss structural design, obtain an accurate Bill of Quantities (BoQ), or schedule a workshop visit."
                 : "Hubungi tim rekayasa kami untuk berdiskusi mengenai desain struktur, estimasi anggaran proyek (RAB), maupun jadwal kunjungan ke workshop fabrikasi kami."}
@@ -502,7 +502,7 @@ export default function OurServicesPage() {
             <Link href="/contact-us" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto gap-2">
                 <span>{isEn ? "Contact Us" : "Hubungi Kami"}</span>
-                <ArrowRight className="w-4 h-4 text-[#d1ffca]" />
+                <ArrowRight className="w-4 h-4 text-white" />
               </Button>
             </Link>
             <a

@@ -4,7 +4,7 @@ import { VisionMissionSection } from "@/components/vision-mission-section";
 import { StatsSection } from "@/components/stats-section";
 import { ServicesSection } from "@/components/services-section";
 import { ValuesSection } from "@/components/values-section";
-import { ProjectEstimator } from "@/components/project-estimator";
+
 import { PortfolioSection } from "@/components/portfolio-section";
 import { WorkflowSection } from "@/components/workflow-section";
 import { ComplianceSection } from "@/components/compliance-section";
@@ -14,7 +14,7 @@ import { FloatingAction } from "@/components/floating-action";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#e5e5e5] text-[#000000] relative selection:bg-[#d1ffca] selection:text-black">
+    <main className="min-h-screen bg-[#f4f6f9] text-[#012655] relative selection:bg-[#0065bf] selection:text-white">
       {/* Top Floating Navigation */}
       <Navbar />
 
@@ -33,8 +33,7 @@ export default function Home() {
       {/* Nilai Keunggulan: Ketepatan Perencanaan, Kualitas, Efisiensi, K3 */}
       <ValuesSection />
 
-      {/* Interactive Project Estimator Tool */}
-      <ProjectEstimator />
+
 
       {/* Filterable Portfolio Showcase */}
       <PortfolioSection />

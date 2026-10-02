@@ -65,21 +65,21 @@ export function ValuesSection() {
   ];
 
   return (
-    <section id="keunggulan" className="py-16 sm:py-24 bg-[#000000] text-[#ffffff] rounded-[36px] sm:rounded-[48px] my-6 max-w-[1240px] mx-auto px-6 sm:px-12">
+    <section id="keunggulan" className="py-16 sm:py-24 bg-gradient-to-br from-[#012655] via-[#012655] to-[#001736] text-[#ffffff] rounded-[36px] sm:rounded-[48px] my-6 max-w-[1240px] mx-auto px-6 sm:px-12 border border-[#0065bf]/30 shadow-xl">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6 pt-6">
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Badge variant="yellow" size="sm">
+            <Badge variant="mint" size="sm">
               NILAI DASAR OPERASIONAL KAMI
             </Badge>
-            <span className="font-mono text-xs text-[#979797]">STANDAR TEKNIS</span>
+            <span className="font-mono text-xs text-[#a4a6a9]">STANDAR TEKNIS</span>
           </div>
           <h2 className="font-condensed text-[40px] sm:text-[64px] font-extrabold uppercase tracking-tight text-[#ffffff] leading-[0.9]">
             KOMITMEN KAMI PADA MUTU &amp; KEPERCAYAAN
           </h2>
         </div>
-        <p className="text-[15px] text-[#979797] max-w-[420px] font-normal leading-relaxed">
+        <p className="text-[15px] text-[#a4a6a9] max-w-[420px] font-normal leading-relaxed">
           Didukung tenaga ahli kompeten, kami menjunjung 4 pilar filosofi kerja
           yang menjadi standar mutlak di setiap tahapan proyek.
         </p>
@@ -92,37 +92,37 @@ export function ValuesSection() {
           return (
             <div
               key={val.no}
-              className="bg-[#171717] rounded-[28px] p-7 sm:p-9 border border-[#2f2f2f] hover:border-[#444444] transition-colors flex flex-col justify-between"
+              className="bg-[#001a3d]/90 rounded-[28px] p-7 sm:p-9 border border-[#0065bf]/25 hover:border-[#0065bf]/60 transition-colors flex flex-col justify-between shadow-xs"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-[10px] bg-[#2f2f2f] text-[#d1ffca] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-[10px] bg-[#012655] text-[#60a5fa] border border-[#0065bf]/30 flex items-center justify-center">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs text-[#fff100] bg-[#fff100]/10 px-2.5 py-1 rounded-[4px]">
+                    <span className="font-mono text-xs text-[#60a5fa] bg-[#0065bf]/20 px-2.5 py-1 rounded-[4px] border border-[#0065bf]/30 font-bold">
                       {val.highlight}
                     </span>
-                    <span className="font-mono text-sm text-[#979797]">/{val.no}</span>
+                    <span className="font-mono text-sm text-[#a4a6a9]">/{val.no}</span>
                   </div>
                 </div>
 
                 <h3 className="font-condensed text-[28px] sm:text-[32px] font-bold uppercase tracking-tight text-[#ffffff] leading-none mb-1">
                   {val.title}
                 </h3>
-                <span className="font-mono text-[12px] text-[#d1ffca] tracking-wide block mb-4">
+                <span className="font-mono text-[12px] text-[#60a5fa] tracking-wide block mb-4">
                   {val.subtitle}
                 </span>
 
-                <p className="text-[15px] text-[#c6c6c6] leading-relaxed mb-6 font-normal">
+                <p className="text-[15px] text-[#cbd5e1] leading-relaxed mb-6 font-normal">
                   {val.desc}
                 </p>
               </div>
 
-              <div className="space-y-2 pt-4 border-t border-[#2f2f2f]">
+              <div className="space-y-2 pt-4 border-t border-[#0065bf]/20">
                 {val.points.map((pt, pIdx) => (
-                  <div key={pIdx} className="flex items-center gap-2.5 text-[13px] text-[#979797]">
-                    <CheckCircle2 className="w-4 h-4 text-[#d1ffca] shrink-0" />
+                  <div key={pIdx} className="flex items-center gap-2.5 text-[13px] text-[#a4a6a9]">
+                    <CheckCircle2 className="w-4 h-4 text-[#60a5fa] shrink-0" />
                     <span>{pt}</span>
                   </div>
                 ))}

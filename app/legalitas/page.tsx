@@ -163,17 +163,17 @@ export default function LegalityPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e5e5e5] text-[#000000] selection:bg-[#d1ffca] selection:text-black">
+    <div className="min-h-screen bg-[#f4f6f9] text-[#012655] selection:bg-[#0065bf] selection:text-white">
       <Navbar />
 
       {/* Header Banner */}
-      <section className="bg-[#000000] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#2f2f2f]">
+      <section className="bg-gradient-to-b from-[#012655] to-[#001a3d] text-white pt-16 sm:pt-24 pb-16 sm:pb-20 border-b border-[#0065bf]/20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-2 mb-4">
             <Badge variant="mint" size="sm">
               {isEn ? "OFFICIAL COMPLIANCE" : "KEPATUHAN REGULASI & STANDAR K3"}
             </Badge>
-            <span className="font-mono text-xs text-[#979797]">
+            <span className="font-mono text-xs text-[#a4a6a9]">
               {isEn ? "VERIFIED LEGALITY" : "DOKUMEN HUKUM RESMI REPUBLIK INDONESIA"}
             </span>
           </div>
@@ -184,7 +184,7 @@ export default function LegalityPage() {
               : "LEGALITAS PERUSAHAAN & SERTIFIKASI RESMI"}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#c6c6c6] max-w-3xl leading-relaxed font-normal mb-8">
+          <p className="text-base sm:text-lg text-[#a4a6a9] max-w-3xl leading-relaxed font-normal mb-8">
             {isEn
               ? "PT. Karya Fabrika Mandiri operates with complete transparency and compliance with all Indonesian corporate, construction, tax, and labor safety laws. We are ready to fulfill all pre-qualification requirements for private and public sector tenders."
               : "PT. Karya Fabrika Mandiri beroperasi dengan transparansi hukum penuh dan memenuhi seluruh perizinan jasa konstruksi, sertifikasi mutu ISO, perpajakan resmi, dan kepatuhan keselamatan kerja (K3) Kemenaker RI. Siap bermitra dalam tender korporasi swasta, BUMN, maupun multinasional."}
@@ -195,9 +195,9 @@ export default function LegalityPage() {
               variant="mint"
               size="lg"
               onClick={() => setProfileModalOpen(true)}
-              className="rounded-[8px] px-8 text-black font-bold gap-2 text-sm"
+              className="rounded-[8px] px-8 text-white font-bold gap-2 text-sm shadow-md"
             >
-              <Download className="w-4 h-4 text-black" />
+              <Download className="w-4 h-4 text-white" />
               <span>{isEn ? "Download Company Legality Dossier" : "Unduh Dokumen Legalitas (PDF)"}</span>
             </Button>
             <a
@@ -218,10 +218,10 @@ export default function LegalityPage() {
           <Badge variant="ash" size="sm" className="mb-2">
             {isEn ? "MASTER DATA" : "IDENTITAS HUKUM PERUSAHAAN"}
           </Badge>
-          <h2 className="font-condensed text-[36px] sm:text-[48px] font-extrabold uppercase tracking-tight text-[#000000] leading-none">
+          <h2 className="font-condensed text-[36px] sm:text-[48px] font-extrabold uppercase tracking-tight text-[#012655] leading-none">
             {isEn ? "STATUTORY REGISTRATION SUMMARY" : "RINGKASAN LEGALITAS FORMAL"}
           </h2>
-          <p className="text-sm text-[#555555] max-w-2xl mt-2">
+          <p className="text-sm text-[#484d53] max-w-2xl mt-2">
             {isEn
               ? "All legal documents have been validated through the Online Single Submission (OSS RBA) and Ministry of Law & Human Rights systems."
               : "Seluruh berkas legalitas resmi telah terverifikasi melalui sistem Online Single Submission (OSS RBA) dan Kementerian Hukum & HAM RI."}
@@ -229,38 +229,38 @@ export default function LegalityPage() {
         </div>
 
         {/* Master Table */}
-        <div className="bg-[#ffffff] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-[#c6c6c6]/60 shadow-sm mb-16">
+        <div className="bg-[#ffffff] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-[#a4a6a9]/30 shadow-sm mb-16">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[#000000] text-white font-mono text-xs uppercase tracking-wider">
-                  <th className="py-4 px-6 border-b border-[#2f2f2f] w-12">#</th>
-                  <th className="py-4 px-6 border-b border-[#2f2f2f]">
+                <tr className="bg-[#012655] text-white font-mono text-xs uppercase tracking-wider">
+                  <th className="py-4 px-6 border-b border-[#0065bf]/20 w-12">#</th>
+                  <th className="py-4 px-6 border-b border-[#0065bf]/20">
                     {isEn ? "Statutory Parameter" : "Uraian Legalitas"}
                   </th>
-                  <th className="py-4 px-6 border-b border-[#2f2f2f]">
+                  <th className="py-4 px-6 border-b border-[#0065bf]/20">
                     {isEn ? "Registration Details" : "Nomor & Keterangan Resmi"}
                   </th>
-                  <th className="py-4 px-6 border-b border-[#2f2f2f] text-right">
+                  <th className="py-4 px-6 border-b border-[#0065bf]/20 text-right">
                     {isEn ? "Verification Status" : "Status Verifikasi"}
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#e5e5e5] text-xs sm:text-sm">
+              <tbody className="divide-y divide-[#f0f3f7] text-xs sm:text-sm">
                 {legalItems.map((item, idx) => (
-                  <tr key={idx} className="hover:bg-[#f9f9f9] transition-colors">
-                    <td className="py-4 px-6 font-mono text-[#888888]">
+                  <tr key={idx} className="hover:bg-[#f0f4f9] transition-colors">
+                    <td className="py-4 px-6 font-mono text-[#a4a6a9]">
                       {(idx + 1).toString().padStart(2, "0")}
                     </td>
-                    <td className="py-4 px-6 font-bold text-[#000000]">
+                    <td className="py-4 px-6 font-bold text-[#012655]">
                       {isEn ? item.labelEn : item.labelId}
                     </td>
-                    <td className="py-4 px-6 font-mono text-[#333333]">
+                    <td className="py-4 px-6 font-mono text-[#484d53]">
                       {item.val}
                     </td>
                     <td className="py-4 px-6 text-right">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#d1ffca]/40 text-[#000000] font-mono text-xs font-semibold">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#34c759]" />
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#0065bf]/10 text-[#0065bf] font-mono text-xs font-semibold">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#0065bf]" />
                         <span>{isEn ? "VALID & ACTIVE" : "TERVERIFIKASI"}</span>
                       </span>
                     </td>
@@ -276,7 +276,7 @@ export default function LegalityPage() {
           <Badge variant="mint" size="sm" className="mb-2">
             {isEn ? "STANDARDS" : "SISTEM MANAJEMEN MUTU & K3"}
           </Badge>
-          <h2 className="font-condensed text-[36px] sm:text-[48px] font-extrabold uppercase tracking-tight text-[#000000] leading-none">
+          <h2 className="font-condensed text-[36px] sm:text-[48px] font-extrabold uppercase tracking-tight text-[#012655] leading-none">
             {isEn ? "CERTIFICATIONS & QUALITY FRAMEWORKS" : "SERTIFIKASI MUTU & KESELAMATAN KERJA"}
           </h2>
         </div>
@@ -285,43 +285,43 @@ export default function LegalityPage() {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="bg-[#ffffff] rounded-[24px] p-6 sm:p-8 border border-[#c6c6c6]/60 shadow-sm flex flex-col justify-between"
+              className="bg-[#ffffff] rounded-[24px] p-6 sm:p-8 border border-[#a4a6a9]/30 shadow-sm flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 rounded-[8px] bg-[#000000] text-white flex items-center justify-center">
-                      <Award className="w-5 h-5 text-[#d1ffca]" />
+                    <div className="w-10 h-10 rounded-[8px] bg-[#012655] text-white flex items-center justify-center">
+                      <Award className="w-5 h-5 text-[#60a5fa]" />
                     </div>
                     <div>
-                      <span className="font-mono text-xs text-[#888888] block">
+                      <span className="font-mono text-xs text-[#a4a6a9] block">
                         ACCREDITED BODY:
                       </span>
-                      <span className="font-mono text-xs font-bold text-[#000000]">
+                      <span className="font-mono text-xs font-bold text-[#012655]">
                         {cert.org}
                       </span>
                     </div>
                   </div>
-                  <Badge variant="yellow" size="sm">
+                  <Badge variant="ash" size="sm" className="font-bold text-[#0065bf] border-[#0065bf]/30 bg-[#0065bf]/10">
                     {cert.code}
                   </Badge>
                 </div>
 
-                <h3 className="font-condensed text-2xl sm:text-3xl font-extrabold uppercase text-[#000000] mb-2 leading-tight">
+                <h3 className="font-condensed text-2xl sm:text-3xl font-extrabold uppercase text-[#012655] mb-2 leading-tight">
                   {isEn ? cert.titleEn : cert.titleId}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-[#555555] leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-[#484d53] leading-relaxed mb-6">
                   {isEn ? cert.descEn : cert.descId}
                 </p>
 
-                <div className="space-y-2 pt-4 border-t border-[#f0f0f0]">
-                  <span className="font-mono text-[11px] uppercase font-bold text-[#000000] block mb-1">
+                <div className="space-y-2 pt-4 border-t border-[#f0f3f7]">
+                  <span className="font-mono text-[11px] uppercase font-bold text-[#012655] block mb-1">
                     {isEn ? "Audit Criteria & Compliance:" : "Kriteria Audit & Standar Kepatuhan:"}
                   </span>
                   {cert.points.map((pt, pIdx) => (
-                    <div key={pIdx} className="flex items-start gap-2 text-xs text-[#444444]">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#34c759] shrink-0 mt-0.5" />
+                    <div key={pIdx} className="flex items-start gap-2 text-xs text-[#484d53]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0065bf] shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </div>
                   ))}
@@ -332,19 +332,19 @@ export default function LegalityPage() {
         </div>
 
         {/* Safety & Integrity Pledge Section */}
-        <div className="bg-[#000000] text-white rounded-[28px] sm:rounded-[36px] p-8 sm:p-12 border border-[#333333] shadow-lg">
+        <div className="bg-gradient-to-br from-[#012655] to-[#001a3d] text-white rounded-[28px] sm:rounded-[36px] p-8 sm:p-12 border border-[#0065bf]/30 shadow-lg">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#34c759] animate-pulse" />
-                <span className="font-mono text-xs text-[#d1ffca] uppercase font-semibold">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#60a5fa] animate-pulse" />
+                <span className="font-mono text-xs text-[#60a5fa] uppercase font-semibold">
                   {isEn ? "SAFETY & ETHICS PLEDGE" : "KOMITMEN MUTLAK K3 & INTEGRITAS"}
                 </span>
               </div>
               <h3 className="font-condensed text-[30px] sm:text-[42px] font-black uppercase text-white leading-tight mb-4">
                 &ldquo;ZERO ACCIDENT &amp; UNCOMPROMISED QUALITY&rdquo;
               </h3>
-              <p className="text-xs sm:text-sm text-[#c6c6c6] leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-[#a4a6a9] leading-relaxed font-normal">
                 {isEn
                   ? "At PT. Karya Fabrika Mandiri, safety is not merely a regulation—it is our fundamental moral obligation. Every steel beam erected, every weld laid, and every crane lifted adheres unconditionally to life-safety protocols, environmental protection, and contractual honesty."
                   : "Bagi manajemen PT. Karya Fabrika Mandiri, keselamatan kerja bukanlah sekadar pemenuhan regulasi di atas kertas, melainkan komitmen moral yang tak tergantikan. Setiap balok baja yang diereksi, setiap pengelasan yang dilakukan, dan setiap pengangkatan crane dijalankan dengan disiplin mitigasi risiko tertinggi demi melindungi keselamatan jiwa tenaga kerja dan aset klien."}
@@ -356,10 +356,10 @@ export default function LegalityPage() {
                 variant="mint"
                 size="md"
                 onClick={() => setProfileModalOpen(true)}
-                className="w-full text-black font-bold text-xs justify-between"
+                className="w-full text-white font-bold text-xs justify-between shadow-md"
               >
                 <span>{isEn ? "View Complete Profile" : "Buka Profil Perusahaan"}</span>
-                <FileCheck className="w-4 h-4 text-black" />
+                <FileCheck className="w-4 h-4 text-white" />
               </Button>
               <Link href="/contact-us">
                 <Button variant="outline-white" size="md" className="w-full text-xs justify-between">

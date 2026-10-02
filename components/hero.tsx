@@ -77,33 +77,34 @@ export function Hero() {
         {/* Enhanced Dark Overlay Layer (Mirrors Reference Image 1) */}
         {/* Dark radial gradient + dark tint ensuring slogan & title pop out clearly */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/75 via-[#000000]/65 to-[#000000]/85" />
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#000000]/40 to-[#000000]/90" />
+        {/* Heavy industrial vignette overlay tuned to corporate navy */}
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#012655]/60 to-[#012655]/95" />
       </div>
 
       {/* Hero Foreground Content */}
       <div className="relative z-10 max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-16 sm:py-24 flex flex-col items-center text-center">
         {/* Top Badges & Operational Status */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 animate-in fade-in slide-in-from-top-4 duration-700">
-          <Badge variant="mint" size="md" className="font-mono text-xs tracking-wider">
+          <Badge variant="mint" size="md" className="font-mono text-xs tracking-wider bg-[#0065bf] text-white">
             {t("hero.badge")}
           </Badge>
-          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[12px] font-mono text-[#d1ffca]">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#34c759] animate-pulse" />
+          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[12px] font-mono text-[#60a5fa]">
+            <span className="inline-block w-2 h-2 rounded-full bg-[#0065bf] animate-pulse" />
             <span>{t("hero.active")}</span>
           </div>
         </div>
 
-        {/* Massive Centered Company Title (Style exactly matching Image 1) */}
+        {/* Massive Centered Company Title */}
         <h1 className="font-condensed text-[48px] sm:text-[72px] md:text-[92px] lg:text-[104px] font-black uppercase tracking-tight text-[#ffffff] leading-[0.92] drop-shadow-md max-w-5xl mb-3 sm:mb-4">
           PT. KARYA FABRIKA MANDIRI
         </h1>
 
-        {/* Prominent Slogan Underneath Title (as requested, crisp & high contrast) */}
+        {/* Prominent Slogan Underneath Title */}
         <div className="mb-6 max-w-3xl">
           <p className="font-condensed text-[26px] sm:text-[36px] md:text-[42px] font-bold text-[#ffffff] tracking-wide uppercase leading-tight drop-shadow">
             &ldquo;{t("hero.slogan")}&rdquo;
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-[#d1ffca] font-mono tracking-wide mt-1.5 font-medium">
+          <p className="text-base sm:text-lg md:text-xl text-[#60a5fa] font-mono tracking-wide mt-1.5 font-medium">
             {t("hero.sloganSub")}
           </p>
         </div>
@@ -119,10 +120,10 @@ export function Hero() {
             <Button
               variant="mint"
               size="lg"
-              className="rounded-[10px] px-8 py-3.5 shadow-lg shadow-black/40 text-[#000000] font-bold text-sm sm:text-base gap-2 group"
+              className="rounded-[10px] px-8 py-3.5 shadow-lg shadow-black/40 text-white font-bold text-sm sm:text-base gap-2 group bg-[#0065bf] hover:bg-[#012655]"
             >
               <span>{t("hero.ctaConsult")}</span>
-              <ArrowRight className="w-5 h-5 text-[#000000] group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
 
@@ -142,7 +143,7 @@ export function Hero() {
               size="lg"
               className="rounded-[10px] px-6 py-3.5 text-white/90 hover:text-white border-white/20 hover:border-white/50 gap-2 text-sm"
             >
-              <Calculator className="w-4 h-4 text-[#d1ffca]" />
+              <Calculator className="w-4 h-4 text-[#60a5fa]" />
               <span>{t("hero.ctaEstimator")}</span>
             </Button>
           </a>
@@ -187,12 +188,12 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Project Photo Switcher Controls (Image 2 vs Image 3) */}
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 w-full max-w-4xl text-left bg-black/50 backdrop-blur-md px-4 py-2.5 rounded-[16px] border border-white/15">
+        {/* Project Photo Switcher Controls */}
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 w-full max-w-4xl text-left bg-[#001a3d]/70 backdrop-blur-md px-4 py-2.5 rounded-[16px] border border-white/15">
           <div className="flex items-center gap-2.5">
-            <Camera className="w-4 h-4 text-[#d1ffca] shrink-0" />
+            <Camera className="w-4 h-4 text-[#60a5fa] shrink-0" />
             <div className="text-xs">
-              <span className="font-mono text-[11px] text-[#888888] block">
+              <span className="font-mono text-[11px] text-[#a4a6a9] block">
                 {t("hero.photoIndicator")} ({currentSlide + 1}/2):
               </span>
               <span className="font-semibold text-white">
@@ -200,7 +201,7 @@ export function Hero() {
                   ? slides[currentSlide].titleEn
                   : slides[currentSlide].titleId}
               </span>
-              <span className="text-[#a0a0a0] ml-2 text-[11px] hidden sm:inline">
+              <span className="text-[#a4a6a9] ml-2 text-[11px] hidden sm:inline">
                 • {slides[currentSlide].spec}
               </span>
             </div>
@@ -229,7 +230,7 @@ export function Hero() {
                     setCurrentSlide(idx as 0 | 1);
                   }}
                   className={`h-2 rounded-full transition-all ${
-                    currentSlide === idx ? "w-6 bg-[#d1ffca]" : "w-2 bg-white/30"
+                    currentSlide === idx ? "w-6 bg-[#0065bf]" : "w-2 bg-white/30"
                   }`}
                   aria-label={`Slide ${idx + 1}`}
                 />

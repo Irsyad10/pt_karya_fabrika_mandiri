@@ -201,13 +201,13 @@ export function PortfolioSection() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Badge variant="mint">REKAM JEJAK &amp; EKSEKUSI NYATA</Badge>
-              <span className="font-mono text-xs text-[#444444]">SHOWCASE</span>
+              <span className="font-mono text-xs text-[#71767c]">SHOWCASE</span>
             </div>
-            <h2 className="font-condensed text-[42px] sm:text-[64px] font-extrabold uppercase tracking-tight text-[#000000] leading-[0.9]">
+            <h2 className="font-condensed text-[42px] sm:text-[64px] font-extrabold uppercase tracking-tight text-[#012655] leading-[0.9]">
               PORTOFOLIO PROYEK TERPILIH
             </h2>
           </div>
-          <p className="text-[16px] text-[#444444] max-w-[460px] font-normal leading-relaxed">
+          <p className="text-[16px] text-[#484d53] max-w-[460px] font-normal leading-relaxed">
             Eksplorasi proyek-proyek strategis yang telah kami selesaikan dengan
             ketepatan perencanaan, mutu prima, dan standar K3 tanpa kompromi.
           </p>
@@ -221,8 +221,8 @@ export function PortfolioSection() {
               onClick={() => setFilter(cat)}
               className={`px-5 py-2.5 rounded-[48px] font-mono text-[12px] font-semibold tracking-wider uppercase transition-all cursor-pointer border ${
                 filter === cat
-                  ? "bg-[#000000] text-[#ffffff] border-[#000000]"
-                  : "bg-[#ffffff] text-[#444444] border-[#c6c6c6]/60 hover:border-[#000000] hover:text-[#000000]"
+                  ? "bg-[#012655] text-[#ffffff] border-[#012655] shadow-xs"
+                  : "bg-[#ffffff] text-[#484d53] border-[#a4a6a9]/40 hover:border-[#0065bf] hover:text-[#0065bf]"
               }`}
             >
               {cat}
@@ -230,17 +230,17 @@ export function PortfolioSection() {
           ))}
         </div>
 
-        {/* Projects Grid (DESIGN.md 2-3 columns flat cards) */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="bg-[#ffffff] rounded-[28px] overflow-hidden border border-[#c6c6c6]/50 flat-card flex flex-col justify-between group cursor-pointer hover:border-[#000000] transition-all"
+              className="bg-[#ffffff] rounded-[28px] overflow-hidden border border-[#a4a6a9]/30 flat-card flex flex-col justify-between group cursor-pointer hover:border-[#0065bf] transition-all shadow-xs"
             >
               <div>
                 {/* Thumbnail Image */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#e5e5e5]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#edf2f7]">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -253,34 +253,34 @@ export function PortfolioSection() {
                       {project.category}
                     </Badge>
                   </div>
-                  <div className="absolute top-3 right-3 bg-[#000000]/75 p-2 rounded-full text-white backdrop-blur-sm group-hover:bg-[#000000] transition-colors">
+                  <div className="absolute top-3 right-3 bg-[#012655]/80 p-2 rounded-full text-white backdrop-blur-sm group-hover:bg-[#0065bf] transition-colors">
                     <Maximize2 className="w-3.5 h-3.5 text-[#ffffff]" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-[#979797] mb-2">
+                  <div className="flex items-center justify-between text-[11px] font-mono text-[#71767c] mb-2">
                     <span>{project.location}</span>
                     <span>{project.year}</span>
                   </div>
 
-                  <h3 className="font-condensed text-[24px] sm:text-[26px] font-bold uppercase tracking-tight text-[#000000] leading-snug group-hover:text-[#2f2f2f] transition-colors mb-3">
+                  <h3 className="font-condensed text-[24px] sm:text-[26px] font-bold uppercase tracking-tight text-[#012655] leading-snug group-hover:text-[#0065bf] transition-colors mb-3">
                     {project.title}
                   </h3>
 
-                  <p className="text-[13px] text-[#444444] line-clamp-2 mb-5 leading-relaxed font-normal">
+                  <p className="text-[13px] text-[#484d53] line-clamp-2 mb-5 leading-relaxed font-normal">
                     {project.description}
                   </p>
 
                   {/* Micro Metrics Chips */}
-                  <div className="grid grid-cols-3 gap-2 pt-4 border-t border-[#f3f3f3]">
+                  <div className="grid grid-cols-3 gap-2 pt-4 border-t border-[#a4a6a9]/20">
                     {project.metrics.map((m, mIdx) => (
-                      <div key={mIdx} className="bg-[#f3f3f3] p-2 rounded-[8px] text-center">
-                        <span className="font-mono text-[10px] text-[#979797] uppercase block">
+                      <div key={mIdx} className="bg-[#f4f6f9] p-2 rounded-[8px] text-center border border-[#a4a6a9]/20">
+                        <span className="font-mono text-[10px] text-[#71767c] uppercase block">
                           {m.label}
                         </span>
-                        <span className="font-condensed text-[14px] font-bold text-[#000000] truncate block">
+                        <span className="font-condensed text-[14px] font-bold text-[#012655] truncate block">
                           {m.value}
                         </span>
                       </div>
@@ -291,10 +291,10 @@ export function PortfolioSection() {
 
               {/* Card Footer Link */}
               <div className="px-6 pb-6 pt-0 flex items-center justify-between">
-                <span className="font-mono text-xs font-semibold text-[#000000] group-hover:underline">
+                <span className="font-mono text-xs font-semibold text-[#0065bf] group-hover:underline">
                   LIHAT SPESIFIKASI TEKNIS
                 </span>
-                <ArrowUpRight className="w-4 h-4 text-[#000000] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 text-[#0065bf] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </div>
             </div>
           ))}

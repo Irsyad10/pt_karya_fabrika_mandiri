@@ -38,6 +38,11 @@ export const metadata: Metadata = {
     "Building Trust Through Quality",
   ],
   authors: [{ name: "PT. KARYA FABRIKA MANDIRI" }],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/images/kfm-icon-64.png",
+  },
 };
 
 export default function RootLayout({
@@ -50,7 +55,7 @@ export default function RootLayout({
       lang="id"
       className={`${barlowCondensed.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="min-h-screen bg-[#e5e5e5] text-[#000000] font-sans antialiased selection:bg-[#d1ffca] selection:text-black">
+      <body className="min-h-screen bg-[#f4f6f9] text-[#012655] font-sans antialiased selection:bg-[#0065bf] selection:text-white">
         <Providers>{children}</Providers>
       </body>
     </html>

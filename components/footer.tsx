@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Building2, Mail, Phone, MapPin, ArrowUp, ShieldCheck, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, ArrowUp } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 
 export function Footer() {
@@ -10,40 +11,46 @@ export function Footer() {
   const isEn = language === "en";
 
   return (
-    <footer className="bg-[#000000] text-[#ffffff] border-t border-[#2f2f2f] pt-16 pb-12">
+    <footer className="bg-[#012655] text-[#ffffff] border-t border-[#0065bf]/30 pt-16 pb-12">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#2f2f2f]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#0065bf]/20">
           {/* Company Brand Column */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#171717] rounded-[8px] flex items-center justify-center border border-[#2f2f2f]">
-                <Building2 className="w-5 h-5 text-[#d1ffca]" />
+              <div className="h-12 w-14 bg-white rounded-[10px] p-1.5 flex items-center justify-center border border-white/20 shadow-sm shrink-0">
+                <Image
+                  src="/images/kfm-logo-transparent.png"
+                  alt="PT. KARYA FABRIKA MANDIRI Logo"
+                  width={100}
+                  height={68}
+                  className="h-9 w-auto object-contain"
+                />
               </div>
               <div>
-                <span className="font-condensed text-2xl font-bold tracking-tight uppercase block leading-none">
+                <span className="font-condensed text-2xl font-bold tracking-tight uppercase block leading-none text-white">
                   PT. KARYA FABRIKA MANDIRI
                 </span>
-                <span className="font-mono text-[11px] text-[#979797] uppercase">
+                <span className="font-mono text-[11px] text-[#a4a6a9] uppercase">
                   Engineering · Construction · Manufacturing
                 </span>
               </div>
             </div>
 
-            <p className="text-[14px] text-[#979797] leading-relaxed max-w-[420px] font-normal">
+            <p className="text-[14px] text-[#a4a6a9] leading-relaxed max-w-[420px] font-normal">
               {isEn
                 ? "Integrated contractor providing engineering consultation, structural steel construction, material procurement, and precision fabrication with a continuous Zero Accident K3 commitment."
                 : "Perusahaan penyedia solusi terintegrasi di bidang konsultasi rekayasa, konstruksi struktur baja, pengadaan material proyek, dan manufaktur presisi dengan komitmen Zero Accident K3 nasional."}
             </p>
 
             <div className="flex flex-wrap gap-2 pt-2">
-              <span className="bg-[#171717] text-[#d1ffca] font-mono text-[11px] px-3 py-1 rounded-[4px] border border-[#2f2f2f]">
+              <span className="bg-[#001a3d] text-[#ffffff] font-mono text-[11px] px-3 py-1 rounded-[4px] border border-[#0065bf]/40">
                 ISO 9001:2015
               </span>
-              <span className="bg-[#171717] text-[#d1ffca] font-mono text-[11px] px-3 py-1 rounded-[4px] border border-[#2f2f2f]">
+              <span className="bg-[#001a3d] text-[#ffffff] font-mono text-[11px] px-3 py-1 rounded-[4px] border border-[#0065bf]/40">
                 ISO 45001:2018
               </span>
-              <span className="bg-[#171717] text-[#fff100] font-mono text-[11px] px-3 py-1 rounded-[4px] border border-[#2f2f2f]">
+              <span className="bg-[#0065bf] text-white font-mono text-[11px] px-3 py-1 rounded-[4px] font-bold">
                 ZERO ACCIDENT K3
               </span>
             </div>
@@ -51,43 +58,43 @@ export function Footer() {
 
           {/* Site Navigation */}
           <div className="lg:col-span-3 space-y-3">
-            <span className="font-mono text-xs text-[#d1ffca] uppercase tracking-wider block">
+            <span className="font-mono text-xs text-[#60a5fa] uppercase tracking-wider block font-bold">
               [ {isEn ? "QUICK NAVIGATION" : "NAVIGASI HALAMAN"} ]
             </span>
-            <ul className="space-y-2 text-sm text-[#979797]">
+            <ul className="space-y-2 text-sm text-[#a4a6a9]">
               <li>
                 <Link href="/" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span>•</span>
+                  <span className="text-[#0065bf]">•</span>
                   <span>{isEn ? "Home Page" : "Halaman Utama (Home)"}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/#visi-misi" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span>•</span>
+                  <span className="text-[#0065bf]">•</span>
                   <span>{isEn ? "Vision, Mission & Motto" : "Visi, Misi & Motto"}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/our-services" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span>•</span>
+                  <span className="text-[#0065bf]">•</span>
                   <span>{isEn ? "Our Services" : "Layanan Kami (Our Services)"}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/portofolio" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span>•</span>
+                  <span className="text-[#0065bf]">•</span>
                   <span>{isEn ? "Project Portfolio" : "Portofolio Proyek"}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/legalitas" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span>•</span>
+                  <span className="text-[#0065bf]">•</span>
                   <span>{isEn ? "Legality & Compliance" : "Legalitas & Sertifikasi"}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact-us" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span>•</span>
+                  <span className="text-[#0065bf]">•</span>
                   <span>{isEn ? "Contact Us" : "Hubungi Kami (Contact Us)"}</span>
                 </Link>
               </li>
@@ -96,10 +103,10 @@ export function Footer() {
 
           {/* Contact & Workshop Address */}
           <div className="lg:col-span-4 space-y-3">
-            <span className="font-mono text-xs text-[#d1ffca] uppercase tracking-wider block">
+            <span className="font-mono text-xs text-[#60a5fa] uppercase tracking-wider block font-bold">
               [ {isEn ? "OFFICE & WORKSHOP" : "KANTOR & WORKSHOP"} ]
             </span>
-            <div className="space-y-3 text-xs font-mono text-[#979797]">
+            <div className="space-y-3 text-xs font-mono text-[#a4a6a9]">
               <div>
                 <span className="text-white font-semibold block mb-0.5">
                   Workshop &amp; Fabrikasi:
@@ -120,11 +127,11 @@ export function Footer() {
 
               <div className="pt-1 space-y-1">
                 <div className="flex items-center gap-2 text-white">
-                  <Phone className="w-3.5 h-3.5 text-[#d1ffca]" />
+                  <Phone className="w-3.5 h-3.5 text-[#60a5fa]" />
                   <span>+62 21 8990 1234 / +62 812 3456 7890</span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
-                  <Mail className="w-3.5 h-3.5 text-[#fff100]" />
+                  <Mail className="w-3.5 h-3.5 text-[#60a5fa]" />
                   <span>proyek@karyafabrika.co.id</span>
                 </div>
               </div>
@@ -133,7 +140,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#979797]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#a4a6a9]">
           <p>
             © {new Date().getFullYear()} PT. KARYA FABRIKA MANDIRI. All rights reserved.
           </p>
@@ -146,7 +153,7 @@ export function Footer() {
             </Link>
             <a
               href="#"
-              className="flex items-center gap-1 text-[#d1ffca] hover:underline"
+              className="flex items-center gap-1 text-[#60a5fa] hover:text-white transition-colors hover:underline"
             >
               <span>{isEn ? "Back To Top" : "Kembali Ke Atas"}</span>
               <ArrowUp className="w-3.5 h-3.5" />

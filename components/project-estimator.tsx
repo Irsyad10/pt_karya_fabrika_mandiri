@@ -95,26 +95,26 @@ export function ProjectEstimator() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Badge variant="mint">SIMULATOR PERENCANAAN TEKNIS</Badge>
-              <span className="font-mono text-xs text-[#444444]">INTERACTIVE TOOL</span>
+              <span className="font-mono text-xs text-[#71767c]">INTERACTIVE TOOL</span>
             </div>
-            <h2 className="font-condensed text-[42px] sm:text-[64px] font-extrabold uppercase tracking-tight text-[#000000] leading-[0.9]">
+            <h2 className="font-condensed text-[42px] sm:text-[64px] font-extrabold uppercase tracking-tight text-[#012655] leading-[0.9]">
               KALKULATOR ESTIMASI PROYEK
             </h2>
           </div>
-          <p className="text-[16px] text-[#444444] max-w-[460px] font-normal leading-relaxed">
+          <p className="text-[16px] text-[#484d53] max-w-[460px] font-normal leading-relaxed">
             Hitung perkiraan kebutuhan baja, durasi pengerjaan, dan ruang lingkup
             layanan untuk proyek Anda dalam beberapa detik.
           </p>
         </div>
 
         {/* Calculator Main Box */}
-        <div className="bg-[#ffffff] rounded-[32px] p-6 sm:p-10 border border-[#c6c6c6]/60 flat-card">
+        <div className="bg-[#ffffff] rounded-[32px] p-6 sm:p-10 border border-[#a4a6a9]/30 flat-card shadow-xs">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Left Options Input Column */}
             <div className="lg:col-span-7 space-y-8">
               {/* Step 1: Project Type */}
               <div>
-                <label className="font-mono text-[12px] text-[#979797] uppercase tracking-wider block mb-3">
+                <label className="font-mono text-[12px] text-[#71767c] uppercase tracking-wider block mb-3 font-semibold">
                   01. PILIH KLASIFIKASI PROYEK
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -124,8 +124,8 @@ export function ProjectEstimator() {
                       onClick={() => setSelectedType(pt.id)}
                       className={`p-4 rounded-[16px] text-left border transition-all cursor-pointer ${
                         selectedType === pt.id
-                          ? "bg-[#000000] text-[#ffffff] border-[#000000]"
-                          : "bg-[#f3f3f3] text-[#000000] border-transparent hover:border-[#c6c6c6]"
+                          ? "bg-[#012655] text-[#ffffff] border-[#012655] shadow-xs"
+                          : "bg-[#f4f6f9] text-[#012655] border-[#a4a6a9]/25 hover:border-[#0065bf]"
                       }`}
                     >
                       <span className="font-condensed text-[18px] sm:text-[20px] font-bold uppercase block leading-snug">
@@ -133,7 +133,7 @@ export function ProjectEstimator() {
                       </span>
                       <span
                         className={`text-[12px] line-clamp-2 mt-1 ${
-                          selectedType === pt.id ? "text-[#c6c6c6]" : "text-[#444444]"
+                          selectedType === pt.id ? "text-[#a4a6a9]" : "text-[#484d53]"
                         }`}
                       >
                         {pt.desc}
@@ -146,10 +146,10 @@ export function ProjectEstimator() {
               {/* Step 2: Scale / Area in m2 */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="font-mono text-[12px] text-[#979797] uppercase tracking-wider">
+                  <label className="font-mono text-[12px] text-[#71767c] uppercase tracking-wider font-semibold">
                     02. ESTIMASI LUAS BANGUNAN / AREA (M²)
                   </label>
-                  <span className="font-mono text-base font-bold text-[#000000] bg-[#d1ffca] px-3 py-1 rounded-[6px]">
+                  <span className="font-mono text-base font-bold text-white bg-[#0065bf] px-3 py-1 rounded-[6px] shadow-xs">
                     {area.toLocaleString('id-ID')} m²
                   </span>
                 </div>
@@ -162,8 +162,8 @@ export function ProjectEstimator() {
                       onClick={() => setArea(preset)}
                       className={`px-3.5 py-1.5 rounded-[8px] font-mono text-xs font-medium cursor-pointer border transition-colors ${
                         area === preset
-                          ? "bg-[#000000] text-[#ffffff] border-[#000000]"
-                          : "bg-[#f3f3f3] text-[#444444] border-transparent hover:border-[#c6c6c6]"
+                          ? "bg-[#012655] text-[#ffffff] border-[#012655] shadow-xs"
+                          : "bg-[#f4f6f9] text-[#484d53] border-transparent hover:border-[#0065bf]"
                       }`}
                     >
                       {preset.toLocaleString('id-ID')} m²
@@ -281,8 +281,8 @@ export function ProjectEstimator() {
                     onClick={() => setTimelineSpeed("standard")}
                     className={`flex-1 p-3 rounded-[12px] border text-center font-medium text-sm transition-all cursor-pointer ${
                       timelineSpeed === "standard"
-                        ? "bg-[#000000] text-[#ffffff] border-[#000000]"
-                        : "bg-[#f3f3f3] text-[#444444] border-transparent hover:border-[#c6c6c6]"
+                        ? "bg-[#012655] text-[#ffffff] border-[#012655]"
+                        : "bg-[#f4f6f9] text-[#484d53] border-transparent hover:border-[#0065bf]"
                     }`}
                   >
                     Jadwal Normal (Efisiensi Maksimal)
@@ -291,8 +291,8 @@ export function ProjectEstimator() {
                     onClick={() => setTimelineSpeed("fasttrack")}
                     className={`flex-1 p-3 rounded-[12px] border text-center font-medium text-sm transition-all cursor-pointer ${
                       timelineSpeed === "fasttrack"
-                        ? "bg-[#000000] text-[#ffffff] border-[#000000]"
-                        : "bg-[#f3f3f3] text-[#444444] border-transparent hover:border-[#c6c6c6]"
+                        ? "bg-[#012655] text-[#ffffff] border-[#012655]"
+                        : "bg-[#f4f6f9] text-[#484d53] border-transparent hover:border-[#0065bf]"
                     }`}
                   >
                     Fast-Track (Shift Ganda &amp; Akselerasi)
@@ -301,46 +301,46 @@ export function ProjectEstimator() {
               </div>
             </div>
 
-            {/* Right Output Card (Inverted Brutalist Surface: #000000, 32px radius) */}
-            <div className="lg:col-span-5 bg-[#000000] text-[#ffffff] rounded-[28px] p-6 sm:p-8 flex flex-col justify-between">
+            {/* Right Output Card */}
+            <div className="lg:col-span-5 bg-gradient-to-br from-[#012655] via-[#012655] to-[#001736] text-[#ffffff] rounded-[28px] p-6 sm:p-8 flex flex-col justify-between border border-[#0065bf]/30 shadow-xl">
               <div>
-                <div className="flex items-center justify-between pb-4 border-b border-[#2f2f2f] mb-6">
-                  <span className="font-mono text-xs text-[#d1ffca] tracking-wider uppercase">
+                <div className="flex items-center justify-between pb-4 border-b border-[#0065bf]/30 mb-6">
+                  <span className="font-mono text-xs text-[#60a5fa] tracking-wider uppercase font-bold">
                     ESTIMASI RINGKASAN TEKNIS
                   </span>
-                  <Badge variant="yellow" size="sm">
+                  <Badge variant="mint" size="sm">
                     SIMULASI
                   </Badge>
                 </div>
 
                 {/* Primary Figure 1: Estimated Steel Tonnage */}
                 <div className="mb-6">
-                  <span className="font-mono text-[11px] text-[#979797] uppercase block mb-1">
+                  <span className="font-mono text-[11px] text-[#a4a6a9] uppercase block mb-1">
                     ESTIMASI KEBUTUHAN STRUKTUR BAJA
                   </span>
                   <div className="flex items-baseline gap-2">
                     <span className="font-condensed text-[54px] sm:text-[64px] font-black leading-none text-[#ffffff]">
                       ~{estimatedTonnage.toLocaleString('id-ID')}
                     </span>
-                    <span className="font-mono text-lg text-[#d1ffca] font-bold">TON</span>
+                    <span className="font-mono text-lg text-[#60a5fa] font-bold">TON</span>
                   </div>
-                  <span className="text-[12px] text-[#979797] mt-1 block">
+                  <span className="text-[12px] text-[#a4a6a9] mt-1 block">
                     Berdasarkan indeks {currentType.steelKgPerSqm} kg/m² standar industri.
                   </span>
                 </div>
 
                 {/* Primary Figure 2: Estimated Timeline */}
-                <div className="mb-8 pt-6 border-t border-[#2f2f2f]">
-                  <span className="font-mono text-[11px] text-[#979797] uppercase block mb-1">
+                <div className="mb-8 pt-6 border-t border-[#0065bf]/20">
+                  <span className="font-mono text-[11px] text-[#a4a6a9] uppercase block mb-1">
                     ESTIMASI DURASI PENGERJAAN
                   </span>
                   <div className="flex items-baseline gap-2">
                     <span className="font-condensed text-[54px] sm:text-[64px] font-black leading-none text-[#ffffff]">
                       {estimatedWeeks} - {estimatedWeeks + 4}
                     </span>
-                    <span className="font-mono text-lg text-[#d1ffca] font-bold">MINGGU</span>
+                    <span className="font-mono text-lg text-[#60a5fa] font-bold">MINGGU</span>
                   </div>
-                  <span className="text-[12px] text-[#979797] mt-1 block">
+                  <span className="text-[12px] text-[#a4a6a9] mt-1 block">
                     {timelineSpeed === "fasttrack"
                       ? "Skema akselerasi fast-track dengan tim paralel di workshop dan site."
                       : "Pola kerja standar dengan milestone pengawasan K3 berjenjang."}
@@ -348,33 +348,33 @@ export function ProjectEstimator() {
                 </div>
 
                 {/* Technical Guarantees Included */}
-                <div className="space-y-2 mb-8 bg-[#171717] p-4 rounded-[16px] border border-[#2f2f2f]">
-                  <div className="flex items-center gap-2 text-xs text-[#c6c6c6]">
-                    <ShieldCheck className="w-4 h-4 text-[#d1ffca] shrink-0" />
+                <div className="space-y-2 mb-8 bg-[#001a3d] p-4 rounded-[16px] border border-[#0065bf]/25">
+                  <div className="flex items-center gap-2 text-xs text-[#cbd5e1]">
+                    <ShieldCheck className="w-4 h-4 text-[#60a5fa] shrink-0" />
                     <span>Garansi Struktural &amp; Standar SNI 1729:2020</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-[#c6c6c6]">
-                    <ShieldCheck className="w-4 h-4 text-[#d1ffca] shrink-0" />
+                  <div className="flex items-center gap-2 text-xs text-[#cbd5e1]">
+                    <ShieldCheck className="w-4 h-4 text-[#60a5fa] shrink-0" />
                     <span>Laporan Inspeksi Las NDT/UT &amp; Mill Certificate</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-[#c6c6c6]">
-                    <ShieldCheck className="w-4 h-4 text-[#d1ffca] shrink-0" />
+                  <div className="flex items-center gap-2 text-xs text-[#cbd5e1]">
+                    <ShieldCheck className="w-4 h-4 text-[#60a5fa] shrink-0" />
                     <span>Pengawasan K3 Bersertifikat Ahli K3 Umum</span>
                   </div>
                 </div>
               </div>
 
               {/* Direct Action Link to WhatsApp / Form */}
-              <div className="pt-4 border-t border-[#2f2f2f]">
+              <div className="pt-4 border-t border-[#0065bf]/20">
                 <a
                   href={`https://wa.me/6281234567890?text=${waMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full block"
                 >
-                  <Button variant="mint" size="lg" className="w-full justify-between">
-                    <span className="font-bold text-black">Kirim Hasil &amp; Dapatkan RAB Resmi</span>
-                    <ArrowRight className="w-5 h-5 text-black" />
+                  <Button variant="mint" size="lg" className="w-full justify-between shadow-md">
+                    <span className="font-bold text-white">Kirim Hasil &amp; Dapatkan RAB Resmi</span>
+                    <ArrowRight className="w-5 h-5 text-white" />
                   </Button>
                 </a>
                 <span className="text-center block text-[11px] font-mono text-[#979797] mt-2.5">

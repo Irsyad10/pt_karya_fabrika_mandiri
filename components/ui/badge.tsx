@@ -14,11 +14,11 @@ export function Badge({
   ...props
 }: BadgeProps) {
   const variantClasses = {
-    mint: "bg-[#d1ffca] text-[#000000] border-0",
-    yellow: "bg-[#fff100] text-[#000000] font-semibold border-0",
-    black: "bg-[#000000] text-[#ffffff] border-0",
-    white: "bg-[#ffffff] text-[#000000] border border-[#c6c6c6]/50",
-    ash: "bg-[#c6c6c6]/40 text-[#444444] border-0",
+    mint: "bg-[#0065bf]/15 text-[#0065bf] border border-[#0065bf]/30",
+    yellow: "bg-[#0065bf] text-[#ffffff] font-semibold border-0",
+    black: "bg-[#012655] text-[#ffffff] border-0",
+    white: "bg-[#ffffff] text-[#012655] border border-[#a4a6a9]/40",
+    ash: "bg-[#a4a6a9]/20 text-[#484d53] border-0",
   };
 
   const sizeClasses = {
